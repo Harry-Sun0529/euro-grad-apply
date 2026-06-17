@@ -211,4 +211,4 @@
 - 部分项目要求通过 WES（World Education Services）进行学历和成绩认证
 - WES 会出具一份按美国/加拿大标准换算的成绩报告
 - 费用约 $200-300，处理时间约 2-4 周
-- 需要先做中国学位认证（通过 CDGDC 或 CHESICC）
+- 需要先做中国学位认证（通过 CSSD/学信网，CDGDC 已于 2022 年 8 月停办，CHESICC 已更名为 CSSD —— 详见 china-specific-procedures.md）

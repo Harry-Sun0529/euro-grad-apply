@@ -25,9 +25,13 @@
 ### 2. 申请流程
 
 **预注册（Pre-iscrizione）**
-- 部分项目需要通过意大利驻华使馆进行预注册
-- Dichiarazione di Valore（价值声明）：使馆对学历的认证
+- 所有中国学生申请意大利学位项目需通过 **Universitaly.it** 完成预注册（无论英文/意文项目、自费/计划生）
+- 计划生通道：**Marco Polo 计划**（非艺术类）/ **Turandot 计划**（艺术类）—— 含 10-11 个月意大利语预科
+- 英文项目可绕过预科，但仍需 Universitaly 预注册
+- **CIMEA 认证**：部分项目（尤其艺术、医学）要求 CIMEA 学历评估
+- Dichiarazione di Valore（价值声明）：使馆对学历的认证，已逐步被 CIMEA 替代
 - Uni-Italia（意大利教育中心中国办公室）可提供咨询
+- 详细流程见 references/china-specific-procedures.md
 
 **在线申请**
 - 大多数学校有在线申请系统

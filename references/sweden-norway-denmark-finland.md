@@ -22,6 +22,7 @@
 - 每轮最多可申请 **4 个项目**（按志愿排序，第一志愿优先录取）
 - 时间线：**10月中旬开放 → 1月15日截止 → 4月初公布结果**
 - 材料：成绩单、学位证、英语成绩、CV、Motivation Letter（各项目要求不同，在 universityadmissions.se 上传）
+- **中国学生特殊要求**：大部分瑞典大学要求通过 **学信网（CSSD）** 直接发送电子版成绩单和学位认证至 UA.se——自己下载上传可能不被接受，详见 references/china-specific-procedures.md
 
 ### 学费与奖学金
 - 非 EU/EEA 学生学费：SEK 90,000-295,000/年（约 €8,000-26,000）
@@ -93,6 +94,7 @@
 - **Aarhus University**：综合强校，社科/商科
 - **CBS**（Copenhagen Business School）：商学院
 - **AAU**（Aalborg University）：以 PBL（Problem-Based Learning）教学法著称
+- **ITU**（IT University of Copenhagen）：专注 IT/计算机/软件，**MSc Software Design 项目明确面向非 CS 本科背景**——是欧陆少有的"明牌转码"项目（详见 cross-discipline.md §6.1）
 - **Royal Danish Academy**：建筑/设计/保护
 
 ### 申请与学费
@@ -110,7 +112,17 @@
 ### 生活
 - 生活费：哥本哈根约 DKK 8,000-10,000+/月（约 €1,100-1,400）
 - 签证：通过 nyidanmark.dk 申请 ST1 居留许可
-- 毕业后有 6 个月求职居留许可
+
+### 毕业后就业（北欧中政策较友好的一国）
+- **Establishment Card（etableringskort）**：丹麦给非 EU/EEA 毕业生的**求职 / 工作许可，最长 2 年**
+  - 不需要拿到工作 offer 才能申，且**允许 self-employment / 自由职业**
+  - 毕业前在 SIRI（nyidanmark.dk）在线申请
+- **Positive List 紧缺职业清单**：丹麦移民局每 6 个月更新一次的人才紧缺职业清单
+  - IT 架构师、软件工程师、数据工程师、各类工程师、医生、教师等均在列
+  - 据丹麦工程师协会（IDA）预测 2026 年仍有 ~13,500 IT/工程师缺口
+- **就业市场**：哥本哈根集中了 Maersk、Novo Nordisk、Vestas、Microsoft 北欧总部等
+- **特别注意**：丹麦税率高（~ 38-55%）但福利好，**对长期留欧**的人友好；短期赚快钱不划算
+- **语言**：英语在 IT/工程岗位通用，但学一些丹麦语对融入和长期居留有帮助
 
 ---
 

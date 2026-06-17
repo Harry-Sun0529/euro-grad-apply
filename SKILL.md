@@ -1,19 +1,25 @@
 ---
 name: euro-grad-apply
 description: >
-  帮助中国本科生和硕士生规划、准备和执行欧洲大陆（非英国）硕士和博士项目的申请。
-  覆盖全学科（理工、商科、人文社科、艺术设计、医学等），涵盖选国选校、申请时间线、
-  文书写作（CV、Motivation Letter、Research Proposal、推荐信）、GPA换算、语言要求、
-  各国特殊流程（APS审核、Nuffic认证、Campus France、antagning.se等）、
-  奖学金策略（CSC国家公派、DAAD、SI、Eiffel、Holland Scholarship等）、
-  博士套磁与导师联系、签证与行前准备，以及中国社交媒体信息源导航（小红书、知乎、
-  一亩三分地、寄托天下、豆瓣、B站、微信公众号、微博等平台的留学社区）。
+  帮助中国本科生、硕士生、应届/GAP/工作几年的求职者规划、准备和执行欧洲大陆（非英国）
+  硕士和博士项目的申请。覆盖全学科（理工、商科、人文社科、艺术设计、医学等），涵盖
+  选国选校、申请时间线、文书写作（CV、Motivation Letter、Research Proposal、推荐信）、
+  GPA换算、语言要求、跨专业申请、保底校策略、各国特殊流程（APS、Nuffic、Campus France、
+  Universitaly、UA.se、CSSD学信网认证等）、奖学金策略（CSC国家公派、DAAD、SI、Eiffel、
+  Holland Scholarship等）、欧盟联合培养项目（Erasmus Mundus EMJMD、EIT 9个KIC、
+  Nordic Five Tech、EuroTech Alliance、CEMS MIM、MSCA Doctoral Networks/COFUND等）、
+  博士套磁与导师联系、签证与行前准备、毕业目标导向的择校（回国/留欧/兼顾/跳板），
+  以及全网信息源（各国官网、英文/当地语言资料 + 中国社交媒体如小红书、知乎、
+  一亩三分地、寄托天下、豆瓣、B站、微信公众号、微博等留学社区）的整合搜集。
   当用户提到以下任何关键词或意图时触发此技能：欧洲留学、欧陆申请、留学欧洲、
   读研、读博、硕士申请、博士申请、Europe master、Europe PhD、study in Germany/
-  Netherlands/Sweden/Switzerland/France/Italy、APS、DAAD、CSC奖学金、
-  motivation letter、套磁、欧洲选校、留学规划，或任何关于去欧洲大陆读硕博的问题——
-  即使用户还没决定去哪个国家。也要在用户提到小红书留学经验、知乎留学帖子、
-  一亩三分地欧洲版等中文信息源搜索需求时触发。
+  Netherlands/Sweden/Switzerland/France/Italy、APS、DAAD、CSC奖学金、CSSD、学信网、
+  motivation letter、套磁、欧洲选校、留学规划、Erasmus Mundus、EIT、联合培养、
+  双学位、Joint Degree、回国就业、留欧、Blue Card、QS排名、海归、选调、落户、
+  GAP year、考研失败、工作几年、跨专业、转码、保底校、梯度搭配、英语够不够、
+  当地语言、雅思托福备考、永居、入籍、欧盟身份，或任何关于去欧洲大陆读硕博的
+  问题——即使用户还没决定去哪个国家。也要在用户提到小红书留学经验、知乎留学
+  帖子、一亩三分地欧洲版等中文信息源搜索需求时触发。
 ---
 
 ## Role & Interaction Principles
@@ -22,6 +28,7 @@ description: >
 
 交互原则：
 - 首先了解用户背景：学校层次（985/211/双非/中外合办）、专业、GPA（及满分制）、语言成绩、预算、目标学位（硕/博）、意向国家/学校（如有）、职业规划
+- **特别重要：在帮用户做任何选校建议前，必须先问清"毕业目标"**——回国发展 / 留在欧洲 / 兼顾两边 / 跳板他国。不同目标对应完全不同的择校逻辑。详见 references/career-goals.md
 - 如果用户背景不完整，主动追问关键信息再给建议，但不要一次问太多——优先问最影响决策的 2-3 个问题
 - 回答要具体可操作，给出网址、平台名、截止日期范围等实际信息
 - 对不确定或可能已变化的信息（如具体截止日期、学费数额），提示用户去官网确认并给出官网链接
@@ -36,7 +43,26 @@ description: >
 
 ## Decision Framework: 选国选校
 
-当用户不确定去哪个国家时，从以下维度引导分析：
+### 第 0 步：确认毕业目标（最重要）
+
+在分析国家/学校之前，**必须先用以下问题确认用户的毕业规划**：
+
+> "在帮你选校之前，我想先了解你的毕业规划——这会显著影响推荐方向：
+> 1. **回国发展**：毕业后回中国找工作/进体制/继续深造
+> 2. **留在欧洲**：希望在毕业国或其他欧洲国家长期工作生活
+> 3. **两者兼顾/暂时不确定**：希望选项开放，毕业后再决定
+> 4. **跳板到其他地方**：例如以欧洲为跳板去美国/加拿大等
+> 你目前是哪种倾向？以及如果有具体规划，可以多说一些（行业、城市、岗位）。"
+
+根据用户回答，按 references/career-goals.md 中对应的路径（A/B/C/D）启动推荐逻辑：
+- **路径 A（回国）**：优先 QS 排名 + 教育部认证 + 学制短
+- **路径 B（留欧）**：优先工签政策 + 行业生态 + 当地语言 + 实习机会
+- **路径 C（兼顾）**：优先荷兰/德国/瑞典 Top 100 + 应用型专业
+- **路径 D（跳板）**：优先顶尖研究校 + 博士导向 + 论文产出
+
+### 第 1 步：常规维度对比
+
+确认目标后，从以下维度引导分析：
 
 ### 学费与生活成本
 - 免学费/低学费：德国（多数州免学费，巴符州非EU €1500/学期，TUM自2024年起对非EU硕士收费€4,000-6,000/学期）、芬兰（2017年起非EU收费但学费减免普遍）、奥地利（€726/学期）、捷克（捷克语授课免费）
@@ -121,6 +147,15 @@ description: >
 | 时间线、timeline、什么时候开始准备、deadline | references/timeline.md |
 | 小红书、知乎、一亩三分地、寄托、论坛、经验帖 | references/chinese-info-sources.md |
 | 艺术、设计、音乐、美术、作品集、portfolio | references/arts-and-humanities.md |
+| Erasmus Mundus、EMJMD、EIT、Digital Master、InnoEnergy、CEMS、N5T、Nordic Five Tech、EuroTech、MSCA、Doctoral Network、COFUND、联合培养、双学位、Joint Degree | references/eu-joint-programs.md |
+| 留欧、回国、毕业规划、就业方向、QS排名、落户、选调、Blue Card、工签、Zoekjaar、APS（法国）、海归、薪资、行业匹配 | references/career-goals.md |
+| 学信网、CSSD、CHSI、CDGDC、CHESICC、Campus France、EEF、Universitaly、Marco Polo、Turandot、CIMEA、UA.se、Studielink、Nuffic、认证报告、中国学生特定流程、预注册 | references/china-specific-procedures.md |
+| GAP、gap year、考研失败、工作几年、工作经验、辞职申请、海归二战、mature student | references/gap-and-work-experience.md |
+| 跨专业、转专业、转码、文转商、文转CS、conversion master、prerequisite、桥接课程、bridge | references/cross-discipline.md |
+| 保底校、梯度搭配、冲刺校、匹配校、safety school、reach、match、全军覆没、申请策略 | references/safety-schools.md |
+| 英语够不够、当地语言、德语、法语、荷兰语、瑞典语、芬兰语、英语普及、配偶途径、欧盟公民配偶 | references/language-reality.md |
+| 雅思、托福、TOEFL、IELTS、英语考试、雅思口语、TestDaF、DELF、DALF、TCF、小语种学习、0 基础 | references/language-prep.md |
+| 永居、PR、入籍、公民身份、Naturalisation、护照、双国籍、长期居留 | references/permanent-residence-and-citizenship.md |
 
 如果用户的问题涉及多个维度（如"德国的奖学金"），同时读取多个相关文件。
 
@@ -188,6 +223,21 @@ description: >
 - 交叉学科（如商业分析、数据科学）成为增长最快的申请方向
 - 多国联申策略成为主流（同时申请德国+荷兰+瑞典等）
 - 考研后转申欧洲（尤其荷兰）成为新趋势——荷兰 95% 硕士课程为英语授课
+- **欧盟联合项目持续扩容**：EMJMD 目录每年新增项目；EIT 9 个 KIC 全部运转；MSCA Doctoral Networks 是欧洲博士培养主渠道
+
+### 毕业去向与就业政策（2026 关键数据）
+**回国向**：
+- 2025 年留学回国 53.56 万人，硕士占 79.3%
+- 上海落户：QS Top 50 零门槛、50-100 半年社保
+- 北京/广东选调生：2025 起政策大幅收紧，部分省份移除海外院校名单——选调不再是主要规划
+- 国内 HR 普遍以 QS 排名为筛选标准，重点关注 QS Top 100
+
+**留欧向**：
+- 德国 EU Blue Card 2026：标准 €50,700，IT/工程紧缺 €45,934.20；新毕业生（3 年内）也适用低门槛
+- 荷兰 30% ruling 2026：30 岁以下硕士门槛 €36,497，30+ 门槛 €48,013，最长 5 年免税
+- 荷兰 2027 起 30% 降至 27%，门槛上调（约 €50,436）
+- 瑞士工程师起薪 CHF 84,000-100,000（顶校），但非 EU 留人配额严格
+- 求职窗口：德国 18 月、荷兰 12 月、瑞典 12 月、芬兰 24 月、**丹麦 Establishment Card 24 月**、瑞士 6 月、法国 12+12 月（APS）
 
 ### 社区经验提醒
 - 博士申请中，"海投"策略（投递几十个 vacancy）比纯套磁更现实
