@@ -143,8 +143,7 @@ references/
 ├── gap-and-work-experience.md              # GAP year / 工作后申请
 ├── cross-discipline.md                     # 跨专业申请
 ├── safety-schools.md                       # 保底校策略
-├── language-reality.md                     # 欧洲语言现实（英语够不够 + 配偶途径）
-├── language-prep.md                        # 语言准备（雅思/托福 + 小语种 0 基础起步）
+├── language.md                             # 语言：英语现实 + 配偶途径 + 雅思托福 + 小语种 0 基础
 ├── permanent-residence-and-citizenship.md  # 永居 / 入籍路径
 ├── scholarships.md                         # 奖学金大全
 ├── materials-guide.md                      # 文书写作
