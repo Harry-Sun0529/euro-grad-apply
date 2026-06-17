@@ -50,19 +50,19 @@
 ## 3. 学费与奖学金
 
 ### 学费（非 EU/EEA 学生）
-- 范围：€8,000-20,000+/年（因校和项目差异大）
-- 理工类通常 €14,000-18,000/年
+- 范围：€8,000-22,000+/年（因校和项目差异大）
+- 理工类通常 €14,000-22,000/年（如 TU Delft 硕士约 €17,310-22,290/年）
 - 商科可能更高（RSM、AMS 等商学院 €15,000-25,000+）
 
 > 以上学费为大致范围，以各校各项目官网公布为准。
 
 ### 奖学金
 
-**Holland Scholarship**
-- 金额：€5,000（一次性）
+**NL Scholarship（原 Holland Scholarship，已更名）**
+- 金额：€5,000（一次性，仅第一年）
 - 面向非 EEA 学生，首次来荷兰读学士或硕士
-- 通过各大学申请，名额有限
-- 截止日期通常 **2月1日** 或更早
+- 通过各大学申请，名额有限，各校截止日期不同（通常 **2月1日-5月1日**）
+- 2026/2027 学年申请于 2025年11月1日开放
 
 **Orange Tulip Scholarship (OTS)**
 - 由 Nuffic 中国办公室协调，各校设置不同金额和名额
@@ -70,7 +70,7 @@
 - 需通过 Nuffic 中国 / nesochina.org 查看具体信息
 
 **各校自有奖学金**
-- Delft Excellence Scholarship：学费减免或全额（学费+生活费）
+- Justus & Louise van Effen Excellence Scholarship（TU Delft）：全额学费减免 + €30,000/年生活费，**12月1日截止**
 - Utrecht Excellence Scholarship：学费减免或全额
 - Amsterdam Merit Scholarship / Amsterdam Excellence Scholarship
 - Leiden University Excellence Scholarship（LExS）

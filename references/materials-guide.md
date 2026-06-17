@@ -9,6 +9,7 @@
 - 清晰简洁，使用 bullet points
 - 德国/奥地利部分项目传统上需附照片，其他国家不需要
 - 推荐使用 LaTeX 模板（Overleaf 上搜 "Academic CV"）或简洁的 Word 模板
+- 博士申请推荐使用 **Europass CV 模板**（europass.eu），欧盟推荐格式
 - 字体统一，排版整洁，PDF 格式提交
 
 ### 结构建议
