@@ -10,7 +10,7 @@
 
 - **国家**：德国、荷兰、瑞典、挪威、丹麦、芬兰、瑞士、法国、意大利、西班牙、比利时、奥地利等
 - **学科**：理工、商科、人文社科、艺术设计、建筑、医学等
-- **流程**：选国选校、申请时间线、文书写作（CV / 动机信 / Research Proposal / 推荐信）、GPA 换算、语言要求、各国特殊流程（APS / CSSD 学信网 / Nuffic / Campus France / Universitaly / UA.se 等）、奖学金（CSC / DAAD / SI / Eiffel / Erasmus Mundus / EIT 等）、欧盟联合培养项目（EMJMD / EIT / N5T / EuroTech / CEMS / MSCA）、博士套磁、签证行前
+- **流程**：选国选校、申请时间线、文书写作（CV / 动机信 / Research Proposal / 推荐信）、GPA 换算、语言要求、各国特殊流程（APS / CSSD 学信网 / Nuffic / Campus France / Universitaly / UA.se 等）、奖学金（CSC / DAAD / SI / Eiffel / Erasmus Mundus / EIT 等）、欧盟联合培养项目（EMJMD / EIT / N5T / EuroTech / CEMS / MSCA）、博士套磁、签证行前等等
 - **特别专题**：毕业目标导向择校（回国 / 留欧 / 兼顾 / 跳板）、GAP year / 工作后申请、跨专业申请、保底校策略、中国学生特定流程
 
 ---
@@ -19,7 +19,7 @@
 
 ### 如果你完全不熟悉 GitHub 和命令行
 
-不用怕，最简单的方法是**直接复制内容贴给 AI**：
+最简单的方法是**直接复制内容贴给 AI**：
 
 #### 方法 A（最简单）：复制粘贴给 AI 用
 1. 打开你常用的 AI 助手（Claude、ChatGPT、Gemini、Kimi、豆包、DeepSeek 等都行）
@@ -34,6 +34,8 @@
 3. 下载后解压，得到一个文件夹，里面是所有 `.md` 文件
 4. 把文件夹拖入 AI 工具（如果你的 AI 支持上传文件夹/多文件，例如 Claude Desktop）
 5. 或者把核心文件（`SKILL.md` + 你最关心的几个 `references/*.md`）一个一个粘贴
+<img width="846" height="720" alt="image" src="https://github.com/user-attachments/assets/317d8dd9-0557-4b73-a11c-bb87aeafa48d" />
+
 
 #### 方法 C（Claude Code 用户）
 ```bash
