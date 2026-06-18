@@ -25,8 +25,10 @@
 1. 打开你常用的 AI 助手（Claude、ChatGPT、Gemini、Kimi、豆包、DeepSeek 等都行）
 2. 在本仓库点开你最关心的文件（例如 `SKILL.md` 是核心，`references/germany.md` 是德国指南）
 3. **点击文件页面右上角的 "Copy raw file" 按钮 / 或全选页面内容复制**
-4. 粘贴到 AI 对话框，加一句："请把这份内容作为你的知识库，然后我接下来问你欧洲留学的问题"
-5. 开始问问题
+<img width="338" height="90" alt="image" src="https://github.com/user-attachments/assets/9c707de8-beb2-4e0a-b667-a1585da58603" />
+
+5. 粘贴到 AI 对话框，加一句："请把这份内容作为你的知识库，然后我接下来问你欧洲留学的问题"
+6. 开始问问题
 
 #### 方法 B：下载整个仓库
 1. 在本仓库首页点击绿色的 **"Code"** 按钮
