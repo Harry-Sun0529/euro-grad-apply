@@ -145,6 +145,8 @@ references/
 ├── safety-schools.md                       # 保底校策略
 ├── language.md                             # 语言：英语现实 + 配偶途径 + 雅思托福 + 小语种 0 基础
 ├── permanent-residence-and-citizenship.md  # 永居 / 入籍路径
+├── country-quick-compare.md                # 国家性价比快查表（学费/生活费/起薪/工签/入籍）
+├── application-systems.md                  # 申请系统操作（Uni-assist/Studielink/UA.se/EEF/Universitaly）
 ├── scholarships.md                         # 奖学金大全
 ├── materials-guide.md                      # 文书写作
 ├── phd-guide.md                            # 博士申请

@@ -101,6 +101,8 @@ description: >
 | 保底校 / 梯度搭配 / 冲刺校 | references/safety-schools.md |
 | 语言（英语/小语种）/ 雅思 / 托福 / TestDaF / DELF / 英语够不够 / 配偶途径 | references/language.md |
 | 永居 / PR / 入籍 / 长期居留 | references/permanent-residence-and-citizenship.md |
+| 性价比 / 国家对比 / 哪个国家便宜 / 起薪 / 生活费对比 / 综合排序 | references/country-quick-compare.md |
+| 申请系统操作 / Uni-assist / Studielink / UA.se / EEF / Universitaly / 系统怎么填 / portal | references/application-systems.md |
 
 问题涉及多个维度时（如"德国奖学金"），同时读取多个文件。
 
