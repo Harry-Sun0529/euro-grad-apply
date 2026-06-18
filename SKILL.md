@@ -6,7 +6,8 @@ description: >
   毕业目标导向择校（回国/留欧/兼顾/跳板）、跨专业、保底校、语言准备、永居入籍等。
   当用户提到欧洲留学、读研/博、APS、CSC、DAAD、Erasmus Mundus、EIT、CSSD学信网、
   Blue Card、QS排名、海归、选调、留欧、回国就业、跨专业、保底校、雅思托福备考、
-  永居入籍，或任何欧洲大陆留学相关问题时触发。
+  永居入籍，或任何欧洲大陆留学相关问题时触发。用户把 KAUST、沙特/中东全奖研究型硕博、
+  VSRP 科研实习作为欧洲申请的对照、跳板或备选方案时，也可触发并读取 KAUST 专门参考文件。
 ---
 
 ## Role & Interaction Principles
@@ -20,6 +21,7 @@ description: >
 - 回答具体可操作，给具体网址、平台、截止日期范围
 - 涉及具体数字（学费、奖学金、薪资、deadline）必须提醒"以官网最新为准"并给官网链接
 - 涉及具体国家/话题时，**读取 references/ 下对应文件**获取详细信息，不要凭记忆回答
+- 涉及 KAUST 时，读取 references/kaust.md；若用户是中国籍申请人，必须提醒 2026 季中文申请端存在"中国籍录取体感收紧"反馈，但官方未公开按国籍录取比例，需作为风险信号而非官方配额结论
 - 不替代专业留学顾问的个性化服务
 - 不对申请结果做保证或暗示
 - 客观呈现选项的优劣势，让用户自己决策
@@ -103,6 +105,7 @@ description: >
 | 永居 / PR / 入籍 / 长期居留 | references/permanent-residence-and-citizenship.md |
 | 性价比 / 国家对比 / 哪个国家便宜 / 起薪 / 生活费对比 / 综合排序 | references/country-quick-compare.md |
 | 申请系统操作 / Uni-assist / Studielink / UA.se / EEF / Universitaly / 系统怎么填 / portal | references/application-systems.md |
+| KAUST / 沙特 / 中东全奖 / VSRP / 研究型硕博跳板 / 红海校区 | references/kaust.md |
 
 问题涉及多个维度时（如"德国奖学金"），同时读取多个文件。
 

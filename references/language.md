@@ -273,3 +273,9 @@
 - Reddit r/AskEurope、r/germany、r/Netherlands 等子版："Can I live here speaking only English?" 类讨论
 - 一亩三分地欧洲版：搜"现实中欧洲各国 WLB"、"只会英语在欧洲找工作"等关键词
 - 小红书：搜"X 国留学 英语够吗"、"X 国 找工作 不会语言"
+
+## KAUST 交叉提示
+
+- KAUST 授课和科研语言为英语，但官网不接受 Medium of Instruction Certificate 作为英语能力证明；具体 IELTS/TOEFL/PTE/Cambridge 分数以 `references/kaust.md` 和官网为准。
+- 中国籍申请人若想提高 KAUST 竞争力，应尽量在申请时提交有效英语成绩，而不是等后补。
+- 2026 季中文申请端有 KAUST 录取收紧反馈；语言成绩达最低线不代表竞争力足够，尤其 MS/PhD 和 PhD 还要看科研匹配。
