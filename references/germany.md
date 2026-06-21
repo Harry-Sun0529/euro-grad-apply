@@ -253,3 +253,9 @@ Akademische Prüfstelle（学术评估中心），德国驻华使馆文化处下
 - 预科通常 1 年，分文科（G-Kurs/W-Kurs 等）和理科（T-Kurs/M-Kurs 等）
 - 预科结束通过 Feststellungsprüfung 考试后获得大学入学资格
 - 多数预科免学费（巴符州除外）
+
+## KAUST 交叉提示
+
+- KAUST 不需要 APS，不走 Uni-assist；但中国申请人的成绩单、学位、英文材料仍需按 KAUST portal 要求准备。
+- 与德国比较时：德国适合留欧就业和工业生态，KAUST 适合全奖 STEM 研究和 PhD 跳板。
+- 中国籍申请人若在 TUM/TU9 与 KAUST 之间选择，提醒 2026 季 KAUST 中文申请端有录取收紧反馈，不应把 KAUST 当德国申请失败后的稳妥保底。

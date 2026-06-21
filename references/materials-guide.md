@@ -212,3 +212,9 @@
 - WES 会出具一份按美国/加拿大标准换算的成绩报告
 - 费用约 $200-300，处理时间约 2-4 周
 - 需要先做中国学位认证（通过 CSSD/学信网，CDGDC 已于 2022 年 8 月停办，CHESICC 已更名为 CSSD —— 详见 china-specific-procedures.md）
+
+## KAUST 文书补充
+
+- KAUST SOP 官方建议约 750 词，重点不是“为什么留学”，而是 past work、research preparation、intended field、academic plans 和 career objectives。
+- 推荐信由 KAUST 联系推荐人提交；申请前要让推荐人知道可能收到系统邮件，并准备能体现研究能力的具体评价。
+- 中国籍申请人需把 2026 季录取收紧反馈当成文书风险提示：SOP 不能泛泛写全奖/排名，要具体到 faculty、lab、project、method、research fit。

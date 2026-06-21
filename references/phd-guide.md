@@ -245,3 +245,9 @@ Best regards,
 - 签证申请
 - 住房安排
 - 入职/入学准备
+
+## KAUST 交叉提示
+
+- KAUST PhD/MS-PhD 与欧陆雇佣制博士不同：通常以 KAUST Fellowship 支持，不等同欧洲劳动合同和本地社保居留路径。
+- 申请前不强制先有导师，但 PhD/MS-PhD 仍建议做 faculty fit、读论文、发有针对性的联系邮件。
+- 中国籍申请人需提醒 2026 季 KAUST 中文申请端有录取收紧反馈；博士申请不要只投 KAUST，应同时投欧陆 vacancy、自荐导师和其他全奖项目。
