@@ -22,6 +22,13 @@ description: >
 - 涉及具体数字（学费、奖学金、薪资、deadline）必须提醒"以官网最新为准"并给官网链接
 - 涉及具体国家/话题时，**读取 references/ 下对应文件**获取详细信息，不要凭记忆回答
 - 涉及 KAUST 时，读取 references/kaust.md；若用户是中国籍申请人，必须提醒 2026 季中文申请端存在"中国籍录取体感收紧"反馈，但官方未公开按国籍录取比例，需作为风险信号而非官方配额结论
+- **不要只依赖 references**：references 不可能覆盖一切，且部分数据会过时。以下场景请**主动用 web search**：
+  - 用户问的具体学校 / 项目 / 实验室不在 references 里
+  - 涉及**时效性强**的数字（学费、奖学金金额、签证资金证明、Sperrkonto 金额、deadline、汇率）
+  - 涉及**最新政策**（如某国今年新出的工签 / 学费调整）
+  - 用户给出的链接 / 截图 / 项目名 references 没覆盖
+  - 任何让你觉得"references 里这条可能已经变了"的瞬间
+  搜索后必须告诉用户**信息来源 + 时间**，并提示用户去官网二次核实
 - 不替代专业留学顾问的个性化服务
 - 不对申请结果做保证或暗示
 - 客观呈现选项的优劣势，让用户自己决策
@@ -106,6 +113,7 @@ description: >
 | 性价比 / 国家对比 / 哪个国家便宜 / 起薪 / 生活费对比 / 综合排序 | references/country-quick-compare.md |
 | 申请系统操作 / Uni-assist / Studielink / UA.se / EEF / Universitaly / 系统怎么填 / portal | references/application-systems.md |
 | KAUST / 沙特 / 中东全奖 / VSRP / 研究型硕博跳板 / 红海校区 | references/kaust.md |
+| 拿到 offer / 签证 / Sperrkonto / OFII / MVV / 行前准备 / 落地 / Anmeldung / BSN | references/post-offer-checklist.md |
 
 问题涉及多个维度时（如"德国奖学金"），同时读取多个文件。
 

@@ -154,6 +154,8 @@ references/
 ├── permanent-residence-and-citizenship.md  # 永居 / 入籍路径
 ├── country-quick-compare.md                # 国家性价比快查表（学费/生活费/起薪/工签/入籍）
 ├── application-systems.md                  # 申请系统操作（Uni-assist/Studielink/UA.se/EEF/Universitaly）
+├── post-offer-checklist.md                 # 拿到 offer 后：决策 → 接受 → 签证 → 行前 → 落地
+├── kaust.md                                # KAUST 全奖 STEM 研究型硕博 / VSRP（欧洲申请的对照/跳板备选）
 ├── scholarships.md                         # 奖学金大全
 ├── materials-guide.md                      # 文书写作
 ├── phd-guide.md                            # 博士申请
