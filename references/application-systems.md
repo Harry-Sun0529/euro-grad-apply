@@ -210,9 +210,3 @@
 - 重要更新会通过邮件，不要忘记登录账号查状态
 - 部分系统（如 EEF）需要在指定日期前确认/拒绝录取，否则自动失效
 - 拿到 offer 后，**录取信原件可能需要邮寄到大使馆办签证**——预留邮寄时间
-
-## KAUST 交叉提示
-
-- KAUST 使用自己的 Admissions portal，不走 Uni-assist、Studielink、UA.se、EEF 或 Universitaly；详见 `references/kaust.md`。
-- 中国籍申请人不要用欧洲系统 deadline 习惯套 KAUST。KAUST 2026 入学季官网显示已关闭，2027 入学预计 8 月中开放；每次回答 deadline 必须查官网最新页面。
-- 2026 季中文申请端有“中国籍录取体感收紧”的反馈，但官方未公开按国籍比例；提交后要持续查 portal、邮箱和推荐信状态，不要只等导师回复。

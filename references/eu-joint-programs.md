@@ -276,9 +276,3 @@ Marie Skłodowska-Curie Actions 的核心项目之一，欧盟资助的博士联
 - Reddit r/ErasmusMundus 子版有大量在读/校友讨论
 - Reddit r/AskAcademia、r/PhD 有跨国博士项目讨论
 - 项目方组织的 alumni webinar / virtual open day 是了解项目最真实的渠道
-
-## KAUST 交叉提示
-
-- KAUST 不是欧盟联合培养项目，不提供 Erasmus Mundus/EIT/N5T/EuroTech 的欧洲多校流动体验。
-- 适合把 KAUST 与 EMJM 全奖、MSCA、欧陆雇佣制博士比较：KAUST funding 强但地理和就业网络不在欧洲。
-- 中国籍申请人如同时申请 EMJM 与 KAUST，要提醒 2026 季 KAUST 中文申请端有收紧反馈，EMJM/欧洲项目仍应保留为独立备选。

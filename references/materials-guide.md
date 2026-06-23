@@ -256,9 +256,3 @@
 - [ ] 用 Turnitin / GPTZero 自查过 AI 概率吗？
 
 ---
-
-## KAUST 文书补充
-
-- KAUST SOP 官方建议约 750 词，重点不是“为什么留学”，而是 past work、research preparation、intended field、academic plans 和 career objectives。
-- 推荐信由 KAUST 联系推荐人提交；申请前要让推荐人知道可能收到系统邮件，并准备能体现研究能力的具体评价。
-- 中国籍申请人需把 2026 季录取收紧反馈当成文书风险提示：SOP 不能泛泛写全奖/排名，要具体到 faculty、lab、project、method、research fit。

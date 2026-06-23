@@ -261,9 +261,3 @@
 - 当用户问"我作为女性申请者有什么独占奖学金"时，**先 web search 当年最新名单**，不要默认 SI Pioneering 等老攻略
 
 ---
-
-## KAUST Fellowship 补充
-
-- KAUST Fellowship 不属于欧洲奖学金，但可作为 STEM 全奖研究型备选；详见 `references/kaust.md`。
-- 官网显示 Fellowship 通常覆盖学费、bench fee、住宿、保险、搬迁/旅行支持和 stipend；金额和资格以 offer 与官网为准。
-- 中国籍申请人需提醒 2026 季中文申请端有录取收紧反馈：不要把 KAUST Fellowship 当作“申请到就全包”的高概率预算方案，应同步申请 CSC/DAAD/EMJM/SI/校内奖等。
