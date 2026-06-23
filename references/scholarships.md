@@ -219,6 +219,49 @@
 - 或瑞士 ETH/EPFL（极低学费）+ ESOP/CSC
 - 芬兰的高学费减免率也使其成为高性价比选择
 
+---
+
+## 10. 女性 / 少数群体专属奖学金
+
+### Schlumberger Foundation Faculty for the Future（STEM 女性博士 / 博士后）
+- 资助：**博士 $50,000/年，博士后 $40,000/年**，可续到完成学业
+- 面向：**发展中国家 / 新兴经济体**的女性研究者（中国通常**不在 eligible 列表**，每年名单略变——以官网为准）
+- 学科：仅 STEM
+- **不资助硕士**——只针对博士及以上
+- 截止：通常 **9 月开放 → 11 月初截止**（次年学年）
+- 官网：[schlumbergerfoundation.com](https://schlumbergerfoundation.com/)
+
+### Swedish Institute Pioneering Women in STEM（瑞典硕士女性 STEM）
+- 资助：全额学费 + SEK 12,000/月 + SEK 15,000 旅行费
+- 面向：**10 国女性公民**：孟加拉、印尼、肯尼亚、马来西亚、尼日利亚、菲律宾、卢旺达、南非、泰国、越南
+- **⚠ 中国不在 eligible 名单**——给中国女性 STEM 申请者讲 SI 时要明确说明，避免空欢喜
+- 要求 **3,000 小时工作经验**（最多 3 个雇主累计）
+- 与 universityadmissions.se 申请绑定
+- 申请窗口与主 SI 一致（2 月 9-25 日）
+
+### L'Oréal-UNESCO For Women in Science
+- **国际奖（Award）**：每年评选 5 位顶尖女性科学家——**不是给学生的**
+- **国家级 Young Talents**：部分国家（德国、法国、英国、奥地利、土耳其等）有面向本国早期女性研究者的项目，资助 €15,000-25,000 不等
+- 中国学生若已在欧洲读博/博后，可关注所在国 L'Oréal Young Talents 项目
+- 官网：[forwomeninscience.com](https://www.forwomeninscience.com/)
+
+### 各国国家级女性奖学金（值得 web search 当年情况）
+- **德国 DAAD**：部分项目对女性 STEM 申请者有 quota / 优先
+- **荷兰 NL Scholarship**：无性别 quota，但部分校级 Diversity Scholarship 有
+- **欧盟 Marie Skłodowska-Curie**：博士网络对性别平衡有要求（约 40% 女性）
+- **AAUW International Fellowship**（美国基金会）：每年约 5 个名额给非美国籍女性硕士/博士在美国学习——也可用于 dual degree 含欧洲段
+
+### LGBTQ+ / 少数族裔 / 残障人士专项
+- 欧盟通常通过**主流奖学金的多元化条款**而非专项奖学金；具体 case 要 web search 当年 Diversity & Inclusion 公示
+- 部分大学（如 Leiden、UvA、Oxford）有 Diversity Scholarship，金额不大但门槛清晰
+
+### 给中国学生的现实提示
+- **国际女性奖学金多数把"中国"排除**——大多面向"发展中/新兴经济体"且中国被划在外
+- 真正可申的少：CSC（性别中性）+ DAAD（部分项目）+ 校级 / 项目级（看具体公告）
+- 当用户问"我作为女性申请者有什么独占奖学金"时，**先 web search 当年最新名单**，不要默认 SI Pioneering 等老攻略
+
+---
+
 ## KAUST Fellowship 补充
 
 - KAUST Fellowship 不属于欧洲奖学金，但可作为 STEM 全奖研究型备选；详见 `references/kaust.md`。

@@ -175,12 +175,79 @@
 - **Netherlands Film Academy**
 - **National Film School of Denmark**
 - **ZHdK 电影系**（瑞士）
+- **FAMU**（捷克布拉格表演艺术学院）：东欧顶尖，学费低
+- **Lodz Film School**（波兰）：传统名校（Polanski、Kieślowski 母校）
+- **CSC**（罗马电影实验中心）：意大利国家电影学院
+- **NFTS**（英国国家电影电视学院）：非欧盟但欧洲圈内顶尖
 
 ### 申请特点
 - 需要提交作品（短片/剧本/剪辑作品等）
 - 多有面试和入学考试
 - 名额极少，竞争激烈
 - 部分院校免学费或低学费
+- Erasmus Mundus 也有电影方向联合硕士（FilmEU 联盟），可 web search 当年项目
+
+---
+
+## 4.5 其他小众但有清晰路径的方向
+
+中国学生申请欧洲时常被"主流方向"（CS、商科、工程）淹没，**以下小众方向在欧洲有成熟项目体系，回国 / 留欧两条路都有具体出路**。
+
+### 体育管理（Sports Management）
+- **Loughborough University**（英国）：全球体育类学科 QS 第一，MSc Sport Management 是行业标杆
+- **FIFA Master**：4 校联合（CIES + De Montfort + SDA Bocconi + Neuchâtel），1 年走完瑞士-英国-意大利
+- **SDA Bocconi**（意大利）：International Master in Sport Management
+- **AISTS**（瑞士 Lausanne）：靠近 IOC、FIFA、UEFA 总部
+- **EU Business School**：MBA Sports Management track
+- 就业方向：体育组织、俱乐部、品牌赞助、赛事运营、电竞
+
+### 电子游戏 / 游戏设计（Game Design / Studies）
+- **Aalto University**（芬兰）：MA Game Design and Production——北欧游戏产业（Supercell、Rovio 母公司）背书
+- **Breda University of Applied Sciences**（荷兰）：International Game Architecture and Design
+- **IT University of Copenhagen**（丹麦）：MSc Games（Technology / Design）
+- **Uppsala University Campus Gotland**（瑞典）：Game Design 系列
+- **Tampere University**（芬兰）：Game Studies + Internet and Game Studies
+- 就业方向：3A 游戏开发、独立游戏、UX、电竞、严肃游戏
+
+### 音乐治疗（Music Therapy）
+- 欧洲优势学科——北欧、德语区传统强项
+- **Aalborg University**（丹麦）：欧洲领先的音乐治疗系
+- **Universität für Musik und darstellende Kunst Wien**（奥地利维也纳音乐与表演艺术大学）
+- **Anglia Ruskin University**（英国）：MA Music Therapy
+- **Hochschule für Musik und Theater Hamburg**（德国汉堡）
+- 就业方向：医疗机构、特殊教育、康复中心、心理治疗——欧洲多国有合规执业路径
+
+### 电竞 / 沉浸式媒体（Esports / XR / Immersive Media）
+- 较新方向，主要在荷兰、英国、瑞典
+- **Breda UAS**：Esports Management
+- **University of York**（英国）：MSc Immersive Technologies
+- **KTH**（瑞典）：HCI + Game Design 交叉方向
+
+### 文化遗产 / 博物馆学（Cultural Heritage / Museum Studies）
+- **Leiden University**（荷兰）：Museum Studies、Heritage Management
+- **University of Bologna**（意大利）：欧洲最古老大学的文化遗产研究强势
+- **University College London Qatar**（英国系列）：博物馆学
+- **University of Glasgow**（英国）
+
+### 时尚 / 奢侈品管理（Fashion / Luxury Management）
+- 此方向欧洲是绝对主场
+- **Polimoda**（佛罗伦萨）、**IED**（米兰）、**NABA**（米兰）：偏设计 + 业务
+- **ESSEC Luxury Brand Management**（法国）、**HEC Paris MSc International Luxury**
+- **Glasgow Caledonian**（英国）：International Fashion Branding
+- **IFA Paris**（法国）
+
+### 公共政策 / 国际关系 / 发展研究（小众但有强项目）
+- **Sciences Po Paris**：公共政策、国际关系顶尖
+- **Hertie School**（柏林）：公共政策
+- **Geneva Graduate Institute**（瑞士日内瓦）：国际关系 / 发展研究——联合国机构集中地
+- **SOAS**（伦敦）：发展研究、地区研究
+
+### 给 Skill 的回应原则
+当用户提小众方向（体育、电影、游戏、音乐治疗、文化遗产等）时：
+1. 先确认用户的具体子方向（"电影"涵盖导演、制片、编剧、电影研究——差异大）
+2. **不要套用主流方向的国家推荐**——例如游戏方向北欧远比德国强；时尚方向意大利/法国远比北欧强
+3. 主动 **web search 当年项目** ——这些方向项目变动比 CS / 商科更频繁，年年有新项目开/关
+4. 提醒**作品集 / 试镜 / 入学考试** 是关键——多数小众方向不只看成绩单
 
 ---
 
