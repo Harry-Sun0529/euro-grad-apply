@@ -146,6 +146,7 @@ references/
 ├── language.md                             # 语言：英语现实 + 配偶途径 + 雅思托福 + 小语种 0 基础
 ├── permanent-residence-and-citizenship.md  # 永居 / 入籍路径
 ├── country-quick-compare.md                # 国家性价比快查表（学费/生活费/起薪/工签/入籍）
+├── industry-to-country.md                  # 行业 → 国家反向映射（半导体/汽车/制药/金融/能源等）
 ├── application-systems.md                  # 申请系统操作（Uni-assist/Studielink/UA.se/EEF/Universitaly）
 ├── post-offer-checklist.md                 # 拿到 offer 后：决策 → 接受 → 签证 → 行前 → 落地
 ├── kaust.md                                # KAUST 沙特全奖 STEM（欧洲之外的对照备选）

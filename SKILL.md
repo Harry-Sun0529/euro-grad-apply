@@ -44,6 +44,10 @@ description: >
   - 不要给"最佳推荐"——给**不同情况下的选项 + 各自取舍**
   - 提示用户：这些选择**直接关系到个人财务和健康**，请用充足时间研究，不要赶时间快速决定
   - 涉及具体金额、月费、汇率时**主动 web search** 当前数据
+- **学校面试 / Networking 的引导时机**（不主动占用 context，但在对应场景主动提）：
+  - 用户拿到顶级硕士项目面试（EIT、Erasmus Mundus、Sciences Po、Bocconi 等）时，主动提醒："硕士项目面试不像博士面试看 research——主要考察动机、文化匹配、英语流利度。建议用 STAR 法准备 3-5 个个人故事，对项目官网课程做功课。"
+  - 用户表达"想留欧"或"找工作 / 实习"时，主动提一句："欧洲就业 50%+ 靠 networking——开学就用 LinkedIn 联系目标项目的在读学生 / 校友、参加学校 career service、关注公司在该国的招聘活跃度。CV 海投通过率远不如 referral。"
+  - 不主动展开讲——用户进一步问再展开
 - **CV 写作方法学**（不给模板，给方法——欧洲 CV 重个人匹配而非格式美观）：
   - 用户让写 CV 时，**不要直接生成成品**，而是按"解析 → 重组 → 定制"三步走：
     1. **解析个人经历**：先问用户完整的教育、研究、项目、实习、技能、兴趣（中文也可），不要让用户先翻成英文
@@ -137,7 +141,8 @@ description: >
 | 性价比 / 国家对比 / 哪个国家便宜 / 起薪 / 生活费对比 / 综合排序 | references/country-quick-compare.md |
 | 申请系统操作 / Uni-assist / Studielink / UA.se / EEF / Universitaly / 系统怎么填 / portal | references/application-systems.md |
 | KAUST / 沙特 / 中东全奖 / VSRP / 研究型硕博跳板 / 红海校区 | references/kaust.md |
-| 拿到 offer / 签证 / Sperrkonto / OFII / MVV / 行前准备 / 落地 / Anmeldung / BSN | references/post-offer-checklist.md |
+| 拿到 offer / 签证 / Sperrkonto / OFII / MVV / 行前准备 / 落地 / Anmeldung / BSN / 资金证明 | references/post-offer-checklist.md |
+| 行业方向 / 我想做 X 行业去欧洲哪国 / 半导体 / 汽车 / 制药 / 量化 / 时尚 / 风电 / 量子 | references/industry-to-country.md |
 
 问题涉及多个维度时（如"德国奖学金"），同时读取多个文件。
 
