@@ -9,9 +9,7 @@
 - **国家**：德国、荷兰、瑞典、挪威、丹麦、芬兰、瑞士、法国、意大利、西班牙、比利时、奥地利等
 - **学科**：理工、商科、人文社科、艺术设计、建筑、医学等
 - **流程**：选国选校、申请时间线、文书写作（CV / 动机信 / Research Proposal / 推荐信）、GPA 换算、语言要求、各国特殊流程（APS / CSSD 学信网 / Nuffic / Campus France / Universitaly / UA.se 等）、奖学金（CSC / DAAD / SI / Eiffel / Erasmus Mundus / EIT 等）、欧盟联合培养项目（EMJMD / EIT / N5T / EuroTech / CEMS / MSCA）、博士套磁、签证行前等等
-- **特别专题**：毕业目标导向择校（回国 / 留欧 / 兼顾 / 跳板）、GAP year / 工作后申请、跨专业申请、保底校策略、中国学生特定流程、KAUST / 沙特全奖研究型硕博与 VSRP 科研实习
-
-KAUST 相关内容会特别提醒中国籍申请人：2026 季中文申请端有“中国籍录取体感收紧”的反馈，但 KAUST 官方未公开按国籍录取比例；应把它作为风险信号，用官网、offer 群、在读学生和导师组信息交叉验证，不要把 KAUST 当作稳定保底。
+- **特别专题**：毕业目标导向择校（回国 / 留欧 / 兼顾 / 跳板）、GAP year / 工作后申请、跨专业申请、保底校策略、中国学生特定流程，以及少量欧洲之外的对照备选（如 KAUST 全奖 STEM 研究型）
 
 ---
 
@@ -93,11 +91,6 @@ git clone https://github.com/Harry-Sun0529/euro-grad-apply.git
 - "Erasmus Mundus 全奖竞争多激烈？"
 - "免学费 + 高奖学金的组合有哪些？"
 
-#### KAUST / 中东全奖研究型项目
-- "KAUST 和欧洲雇佣制博士怎么选？"
-- "KAUST VSRP 适合我这种背景吗？"
-- "2026 年 KAUST 中国籍录取是不是收紧了，我该怎么规避风险？"
-
 #### 时间线
 - "我大三下学期开始准备来得及吗？"
 - "2026 秋入学的关键时间节点是什么？"
@@ -155,7 +148,7 @@ references/
 ├── country-quick-compare.md                # 国家性价比快查表（学费/生活费/起薪/工签/入籍）
 ├── application-systems.md                  # 申请系统操作（Uni-assist/Studielink/UA.se/EEF/Universitaly）
 ├── post-offer-checklist.md                 # 拿到 offer 后：决策 → 接受 → 签证 → 行前 → 落地
-├── kaust.md                                # KAUST 全奖 STEM 研究型硕博 / VSRP（欧洲申请的对照/跳板备选）
+├── kaust.md                                # KAUST 沙特全奖 STEM（欧洲之外的对照备选）
 ├── scholarships.md                         # 奖学金大全
 ├── materials-guide.md                      # 文书写作
 ├── phd-guide.md                            # 博士申请
