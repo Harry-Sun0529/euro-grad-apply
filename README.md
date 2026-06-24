@@ -86,6 +86,7 @@ git clone https://github.com/Harry-Sun0529/euro-grad-apply.git
 - "CSC 和 DAAD 能同时申吗？"
 - "Erasmus Mundus 全奖竞争多激烈？"
 - "免学费 + 高奖学金的组合有哪些？"
+- "Nordic Five Tech / N5T 还有哪些项目开放？有统一奖学金吗？"
 
 #### 时间线
 - "我大三下学期开始准备来得及吗？"

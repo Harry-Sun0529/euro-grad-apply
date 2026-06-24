@@ -141,7 +141,40 @@
 
 ---
 
-## 7. 瑞士政府卓越奖学金（Swiss Government Excellence Scholarships）
+## 7. Nordic Five Tech（N5T）联合硕士与校级奖学金
+
+### 项目定位
+- Nordic Five Tech 是 Aalto、Chalmers、DTU、KTH、NTNU 五所北欧技术大学的战略联盟。
+- N5T 曾长期提供 Joint Master’s Programmes（JMPs），典型模式是 2 年 120 ECTS，在两所北欧成员校各学习约 1 年，毕业获得双学位或联合培养结构。
+- 适合理工科用户把它作为 Erasmus Mundus 之外的北欧双校/跨校学习选项，尤其是能源、环境、海事、材料、寒冷地区工程等方向。
+
+### 2026 关键变化
+- **不要把 N5T 当作稳定开放的全奖项目**：N5T 官方 Studies 页面说明，多数 Joint Master’s Programmes 在 2025 后不再接受新 intake。
+- Aalto 项目页明确提示部分 Nordic Master（如 Innovative Sustainable Energy Engineering、Maritime Engineering）**2026 入学不招生**。
+- KTH Polymer Technology 页面显示该项目最后一届为 2024 入学，未来不再开放申请，替代方向需看 KTH/Aalto/DTU 等成员校自己的普通硕士项目。
+- 因此回答 N5T 时必须先查当年项目页，确认是否仍开放；不要沿用旧攻略中的 N5T 项目清单。
+
+### 费用与奖学金逻辑
+- N5T 本身通常**不是一个统一发放全额奖学金的项目**。
+- 学费通常按学生注册/就读的成员校政策执行；非 EU/EEA 学生通常需要缴纳学费，但具体由 Aalto、Chalmers、DTU、KTH、NTNU 各自规则决定。
+- 奖学金也主要看成员校渠道：Aalto Scholarship、Chalmers IPOET/Avancez 等、DTU tuition waivers / scholarships、KTH Scholarship、NTNU/挪威相关费用政策等。
+- Maritime Engineering 项目页明确写到该项目没有专属奖学金，需要查看 partner universities 的奖学金或 tuition waiver。
+
+### 对中国学生的申请建议
+- 如果目标是“全奖跨国硕士”，优先看 Erasmus Mundus；N5T 更像北欧强校双校培养/移动学习机会，不应默认有 EMJM 级别资助。
+- 如果目标是北欧就业，N5T 的价值在于两国网络、北欧工程品牌和 thesis/industry project；但 2026 起要重点核实项目是否还招生。
+- 如果用户预算敏感：先查 entry university 的学费与奖学金，再查第二年 mobility university 是否另收费用，避免只看项目宣传。
+- 搜索关键词：`Nordic Five Tech joint master 2026 intake`、`N5T scholarships`、`Aalto Nordic Master no intake 2026`、`KTH Nordic Five Tech programme closed`。
+
+### 官方入口
+- Nordic Five Tech Studies：https://www.nordicfivetech.org/studies
+- Nordic Five Tech About：https://www.nordicfivetech.org/about
+- Aalto Nordic Master / study options：https://www.aalto.fi/en/study-options
+- KTH Master's studies：https://www.kth.se/en/studies/master
+
+---
+
+## 8. 瑞士政府卓越奖学金（Swiss Government Excellence Scholarships）
 
 - 面向博士、博士后、艺术家
 - 金额：CHF 1,920/月（博士生）+ 学费减免 + 保险 + 机票
@@ -152,7 +185,7 @@
 
 ---
 
-## 8. 其他重要奖学金
+## 9. 其他重要奖学金
 
 ### 芬兰
 - 各校 **tuition waiver**（学费减免）非常普遍，覆盖 50-100% 学费
@@ -184,7 +217,7 @@
 
 ---
 
-## 9. 奖学金申请策略
+## 10. 奖学金申请策略
 
 ### 时间规划
 - **提前一年** 开始研究奖学金信息
@@ -196,6 +229,7 @@
 - 不同奖学金的定位不同，不要只依赖一个
 - CSC 适合博士，校级奖学金适合硕士
 - Erasmus Mundus 是跨国学习的独特机会
+- Nordic Five Tech/N5T 要先查项目是否仍开放；多数旧 Joint Master 2025 后不再招新，奖学金看成员校而非联盟统一发放
 
 ### 文书策略
 - 奖学金文书比录取文书更需要展示 **leadership、未来规划、社会影响**
@@ -221,7 +255,7 @@
 
 ---
 
-## 10. 女性 / 少数群体专属奖学金
+## 11. 女性 / 少数群体专属奖学金
 
 ### Schlumberger Foundation Faculty for the Future（STEM 女性博士 / 博士后）
 - 资助：**博士 $50,000/年，博士后 $40,000/年**，可续到完成学业
