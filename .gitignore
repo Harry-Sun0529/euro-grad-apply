@@ -3,3 +3,11 @@
 *.swo
 .idea/
 .vscode/
+
+# 本地证据存档（不推送）
+*conversation-archive*/
+*对话记录*
+*创作时间线*
+*反抄袭证据*
+*.jsonl
+SHA256-校验码.txt
