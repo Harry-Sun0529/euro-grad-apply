@@ -197,8 +197,8 @@ Akademische Prüfstelle（学术评估中心），德国驻华使馆文化处下
 ### 留学签证
 - 需要在中国的德国使领馆申请学生签证
 - 核心材料：大学录取通知、APS 证书、资金证明、健康保险、语言成绩
-- **限制账户（Sperrkonto）**：自 2024年9月起需存入 **€11,904/年（即每月 €992）**，此金额每年随通胀调整
-  - 历史变化参考：2019年 €10,200/年 → 2023年 €11,208/年 → 2024年9月起 €11,904/年
+- **限制账户（Sperrkonto）**：约 **€11,000-12,000/年**（按月发放，金额每年随通胀调整）
+  - **具体当年金额必须查官网**：[auswaertiges-amt.de "Sperrkonto"](https://www.auswaertiges-amt.de/en/sperrkonto-388600)
   - 常用 Sperrkonto 提供商：Expatrio（expatrio.com）、Fintiba（fintiba.com）
   - 到德国后每月解冻约 €992
   - 以签证申请时德国使馆公布的最新金额为准

@@ -1,0 +1,43 @@
+name: Link Check
+
+# 每月 1 号凌晨 UTC 02:00 自动跑（北京时间上午 10 点）
+# 也可以在 GitHub Actions 页面手动触发
+on:
+  schedule:
+    - cron: '0 2 1 * *'
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Lychee link checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 扫描所有 markdown 里的链接
+          # --no-progress 关闭进度条（CI 输出更干净）
+          # --max-concurrency 限制并发避免被官方限流
+          # --timeout 单链接 20 秒超时
+          # --accept 接受常见非 200 状态（如有些站对 bot 返 403）
+          args: >-
+            --no-progress
+            --max-concurrency 4
+            --timeout 20
+            --accept 200,206,301,302,403,429
+            --exclude-mail
+            './**/*.md'
+          fail: false
+          output: ./lychee-report.md
+
+      - name: Create issue if links failed
+        if: env.lychee_exit_code != '0'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "🔗 月度链接检查报告 - ${{ github.run_id }}"
+          content-filepath: ./lychee-report.md
+          labels: link-check, maintenance

@@ -1,0 +1,67 @@
+name: Semi-Annual Content Review Reminder
+
+# 每年 1 月 1 号 + 7 月 1 号 UTC 02:00 自动跑
+# 创建一个 issue 提醒复审最易过时的文件
+on:
+  schedule:
+    - cron: '0 2 1 1 *'   # 1月1日
+    - cron: '0 2 1 7 *'   # 7月1日
+  workflow_dispatch:
+
+jobs:
+  create-review-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate review issue body
+        run: |
+          cat > review-body.md <<'EOF'
+          # 📅 半年复审提醒
+
+          这个 issue 由 GitHub Action 自动创建——提醒检查 skill 内容是否需要更新。
+
+          ## 重点复审清单
+
+          以下文件含较多**易过时的具体数字**（学费、奖学金金额、签证资金证明、deadline），
+          请逐一检查并对照各官方网站当前公示更新：
+
+          ### 高优先级（数字密集）
+          - [ ] `references/scholarships.md` — CSC / DAAD / SI / Eiffel / Erasmus+ 等月生活费、deadline
+          - [ ] `references/post-offer-checklist.md` — Sperrkonto 金额、各国资金证明、Blue Card 门槛
+          - [ ] `references/country-quick-compare.md` — 学费 / 起薪 / 工签 / 入籍年限快查表
+          - [ ] `references/career-goals.md` — Blue Card、30% ruling、永居年限
+          - [ ] `references/eu-joint-programs.md` — EMJMD 生活费、MSCA 薪资标准
+          - [ ] `references/permanent-residence-and-citizenship.md` — 各国入籍年限、语言要求
+
+          ### 中优先级（政策结构变化）
+          - [ ] `references/germany.md` — APS、Sperrkonto、TUM 学费政策
+          - [ ] `references/netherlands.md` — Nuffic、Studielink、MVV
+          - [ ] `references/france.md` — Campus France、Eiffel
+          - [ ] `references/sweden-norway-denmark-finland.md` — 挪威收费政策、丹麦 Establishment Card
+          - [ ] `references/switzerland.md` — ETH/EPFL 学费
+
+          ### 低优先级（流程稳定）
+          - [ ] 其他 `references/*.md` 抽样检查
+
+          ## 复审步骤建议
+          1. 打开高优先级文件
+          2. 对照每个数字 → 到对应官网查最新值
+          3. 不确定的可以问 Claude / GPT 做对比
+          4. 更新后请同步修改 README 顶部的"内容快照日期"
+
+          ## 链接检查
+          配套的 `link-check.yml` 每月已经在跑，单独看 issues 列表里的"🔗 月度链接检查报告"。
+
+          ---
+          *由 .github/workflows/semi-annual-review.yml 自动创建*
+          EOF
+
+      - name: Create review issue
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "📅 半年复审提醒 - ${{ github.event.schedule == '0 2 1 1 *' && '上半年' || '下半年' }}"
+          content-filepath: ./review-body.md
+          labels: review, maintenance

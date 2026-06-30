@@ -17,7 +17,7 @@
 
 ### 奖学金
 - **Erasmus+ Scholarship**（全额）：
-  - 生活费 **€1,400/月**（共 24 个月）
+  - 生活费约 **€1,400/月**（年度调整，以官方 catalogue 为准）
   - 参与费/学费全免
   - 旅费、签证费、安置费补贴
 - Partner Country 学生（含中国）通常名额更多、金额更高
@@ -169,7 +169,7 @@ Marie Skłodowska-Curie Actions 的核心项目之一，欧盟资助的博士联
 
 ### 资助
 - 雇佣制：博士生是项目成员，签劳动合同
-- 薪资遵循欧盟标准（**约 €3,400-4,000/月 living allowance + €1,000+/月 mobility/family allowance**）
+- 薪资遵循欧盟标准（含 living allowance + mobility/family allowance，合计税前约 €4,000-5,000/月，年度微调；以 MSCA 当年公示为准）
 - 待遇水平在欧洲博士中属于上游
 
 ### 申请
