@@ -17,32 +17,46 @@
 
 ---
 
-## 🚀 从零开始：5 分钟上手指南
+## 🚀 三种启动方式（零基础也能用）
 
-#### 方法 A（最简单）：复制粘贴给 AI 用
-1. 打开你常用的 AI 助手（Claude、ChatGPT、Gemini、Kimi、豆包、DeepSeek 等都行）
-2. 在本仓库点开你最关心的文件（例如 `SKILL.md` 是核心，`references/germany.md` 是德国指南）
-3. **点击文件页面右上角的 "Copy raw file" 按钮 / 或全选页面内容复制**
-<img width="338" height="90" alt="image" src="https://github.com/user-attachments/assets/9c707de8-beb2-4e0a-b667-a1585da58603" />
+### 方法 1：临时试用（30 秒，什么都不装）
+1. 点开仓库里你最关心的文件（如 `SKILL.md`）
+2. 点右上角 **"Copy raw file"** 复制全文
+3. 粘贴给任何 AI（Kimi / 豆包 / Claude / ChatGPT / DeepSeek），加一句"请把这份内容当作你的知识库，我要问欧洲留学问题"
 
-5. 粘贴到 AI 对话框，加一句："请把这份内容作为你的知识库，然后我接下来问你欧洲留学的问题"
-6. 开始问问题
+<img width="338" alt="copy raw file" src="https://github.com/user-attachments/assets/9c707de8-beb2-4e0a-b667-a1585da58603" />
 
-#### 方法 B：下载整个仓库
-1. 在本仓库首页点击绿色的 **"Code"** 按钮
-2. 选 **"Download ZIP"**
-3. 下载后解压，得到一个文件夹，里面是所有 `.md` 文件
-4. 把文件夹拖入 AI 工具（如果你的 AI 支持上传文件夹/多文件，例如 Claude Desktop）
-5. 或者把核心文件（`SKILL.md` + 你最关心的几个 `references/*.md`）一个一个粘贴
-<img width="846" height="720" alt="image" src="https://github.com/user-attachments/assets/317d8dd9-0557-4b73-a11c-bb87aeafa48d" />
+> 缺点：每开新对话都要重新贴。
 
+---
 
-#### 方法 C（Claude Code 用户）
+### 方法 2：一次装好，永久带着 ⭐ 推荐
+装进 AI 的"智能体 / 项目"里，之后每次对话自动带着全部内容。
+
+**① 下载**：仓库首页绿色 **`Code`** 按钮 → `Download ZIP` → 解压（跟下载普通压缩包一样，不用命令行）
+
+<img width="846" alt="download zip" src="https://github.com/user-attachments/assets/317d8dd9-0557-4b73-a11c-bb87aeafa48d" />
+
+**② 找到你 AI 的"智能体"功能**（都是同一个东西，上传一次永久用）：
+
+| AI | 功能名 | 费用 |
+|---|---|---|
+| Kimi / 豆包 / 通义 / 智谱 | 智能体 | 免费 |
+| Claude / ChatGPT / Gemini | Projects / GPT / Gems | 需订阅 |
+
+**③ 创建智能体 → 找到"知识库 / 文件"上传入口 → 把所有 `.md` 文件拖进去 → 保存**
+
+之后进这个智能体直接问就行。
+
+---
+
+### 方法 3：命令行用户（自动更新）
 ```bash
-cd ~/.claude/skills/
 git clone https://github.com/Harry-Sun0529/euro-grad-apply.git
 ```
-之后 Claude Code 会自动识别 skill，正常对话即可。
+更新：`cd euro-grad-apply && git pull`。Claude Code 用户克隆到 `~/.claude/skills/` 自动识别。
+
+> 看不懂命令？用方法 2 就够了。
 
 ---
 
