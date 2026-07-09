@@ -1,0 +1,58 @@
+name: Build Merged Single File
+
+# 当 SKILL.md 或 references/ 下任何文件变化时，自动重新生成合并单文件
+# 供有"知识库文件数上限"的 AI 平台（如 Gemini Gem 限 10 个文件）使用
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'SKILL.md'
+      - 'references/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build merged file
+        run: |
+          OUT="euro-grad-apply-full.md"
+          {
+            echo "# Euro Grad Apply · 全部内容合并版（单文件）"
+            echo ""
+            echo "> 本文件由所有 \`.md\` 自动合并生成，供有\"知识库文件数上限\"的 AI 平台使用（如 Gemini Gem 限 10 个文件）。"
+            echo "> 只需上传这一个文件即可。**请勿手动编辑本文件**——它会在源文件更新时被自动覆盖。"
+            echo "> 源仓库：https://github.com/Harry-Sun0529/euro-grad-apply"
+            echo ""
+            echo "---"
+            echo ""
+            # 先放主文件 SKILL.md，再按文件名排序放 references
+            cat SKILL.md
+            echo ""
+            for f in $(ls references/*.md | sort); do
+              echo ""
+              echo "---"
+              echo ""
+              echo "<!-- ===== 来源文件: $f ===== -->"
+              echo ""
+              cat "$f"
+              echo ""
+            done
+          } > "$OUT"
+          echo "生成完成: $(wc -l < $OUT) 行, $(wc -c < $OUT) 字节"
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet euro-grad-apply-full.md; then
+            echo "无变化，跳过提交"
+          else
+            git add euro-grad-apply-full.md
+            git commit -m "chore: 自动更新合并单文件 euro-grad-apply-full.md"
+            git push
+          fi
