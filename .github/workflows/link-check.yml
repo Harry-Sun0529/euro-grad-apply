@@ -24,12 +24,15 @@ jobs:
           # --max-concurrency 限制并发避免被官方限流
           # --timeout 单链接 20 秒超时
           # --accept 接受常见非 200 状态（如有些站对 bot 返 403）
+          # --exclude-path 跳过合并单文件：它的链接与源文件完全重复，
+          #   否则每月把所有外链查两遍，也是被官网限流的主因
           args: >-
             --no-progress
             --max-concurrency 4
             --timeout 20
             --accept 200,206,301,302,403,429
             --exclude-mail
+            --exclude-path ./euro-grad-apply-full.md
             './**/*.md'
           fail: false
           output: ./lychee-report.md

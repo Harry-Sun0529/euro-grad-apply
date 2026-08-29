@@ -29,22 +29,22 @@ jobs:
           请逐一检查并对照各官方网站当前公示更新：
 
           ### 高优先级（数字密集）
-          - [ ] `references/scholarships.md` — CSC / DAAD / SI / Eiffel / Erasmus+ 等月生活费、deadline
-          - [ ] `references/post-offer-checklist.md` — Sperrkonto 金额、各国资金证明、Blue Card 门槛
-          - [ ] `references/country-quick-compare.md` — 学费 / 起薪 / 工签 / 入籍年限快查表
-          - [ ] `references/career-goals.md` — Blue Card、30% ruling、永居年限
-          - [ ] `references/eu-joint-programs.md` — EMJMD 生活费、MSCA 薪资标准
-          - [ ] `references/permanent-residence-and-citizenship.md` — 各国入籍年限、语言要求
+          - [ ] `skills/euro-grad-apply/references/scholarships.md` — CSC / DAAD / SI / Eiffel / Erasmus+ 等月生活费、deadline
+          - [ ] `skills/euro-grad-apply/references/post-offer-checklist.md` — Sperrkonto 金额、各国资金证明、Blue Card 门槛
+          - [ ] `skills/euro-grad-apply/references/country-quick-compare.md` — 学费 / 起薪 / 工签 / 入籍年限快查表
+          - [ ] `skills/euro-grad-apply/references/career-goals.md` — Blue Card、30% ruling、永居年限
+          - [ ] `skills/euro-grad-apply/references/eu-joint-programs.md` — EMJMD 生活费、MSCA 薪资标准
+          - [ ] `skills/euro-grad-apply/references/permanent-residence-and-citizenship.md` — 各国入籍年限、语言要求
 
           ### 中优先级（政策结构变化）
-          - [ ] `references/germany.md` — APS、Sperrkonto、TUM 学费政策
-          - [ ] `references/netherlands.md` — Nuffic、Studielink、MVV
-          - [ ] `references/france.md` — Campus France、Eiffel
-          - [ ] `references/sweden-norway-denmark-finland.md` — 挪威收费政策、丹麦 Establishment Card
-          - [ ] `references/switzerland.md` — ETH/EPFL 学费
+          - [ ] `skills/euro-grad-apply/references/germany.md` — APS、Sperrkonto、TUM 学费政策
+          - [ ] `skills/euro-grad-apply/references/netherlands.md` — Nuffic、Studielink、MVV
+          - [ ] `skills/euro-grad-apply/references/france.md` — Campus France、Eiffel
+          - [ ] `skills/euro-grad-apply/references/sweden-norway-denmark-finland.md` — 挪威收费政策、丹麦 Establishment Card
+          - [ ] `skills/euro-grad-apply/references/switzerland.md` — ETH/EPFL 学费
 
           ### 低优先级（流程稳定）
-          - [ ] 其他 `references/*.md` 抽样检查
+          - [ ] 其他 `skills/euro-grad-apply/references/*.md` 抽样检查
 
           ## 复审步骤建议
           1. 打开高优先级文件

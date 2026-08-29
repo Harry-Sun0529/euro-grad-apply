@@ -11,3 +11,6 @@
 *反抄袭证据*
 *.jsonl
 SHA256-校验码.txt
+
+# wayfinder 工作区（不推送）
+.scratch/
