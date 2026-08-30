@@ -1,0 +1,18 @@
+name: Validate
+
+# 校验仓库结构：插件 manifest 一致性、SKILL.md frontmatter、
+# reference 引用存在性与孤儿检查、合并单文件新鲜度
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run validation
+        run: python3 scripts/validate.py

@@ -1,0 +1,24 @@
+{
+  "name": "euro-grad-apply",
+  "version": "1.0.0",
+  "description": "帮助中国学生规划欧洲大陆（非英国）硕士/博士申请：选国选校、文书、奖学金、欧盟联合培养、博士套磁、签证行前。",
+  "author": {
+    "name": "Harry-Sun0529",
+    "url": "https://github.com/Harry-Sun0529"
+  },
+  "homepage": "https://github.com/Harry-Sun0529/euro-grad-apply",
+  "repository": "https://github.com/Harry-Sun0529/euro-grad-apply",
+  "license": "MIT",
+  "keywords": [
+    "留学",
+    "欧洲留学",
+    "研究生申请",
+    "奖学金",
+    "德国",
+    "荷兰",
+    "study-abroad",
+    "europe",
+    "graduate-admission",
+    "phd"
+  ]
+}
