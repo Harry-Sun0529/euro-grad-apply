@@ -99,8 +99,11 @@ cp -r ~/euro-grad-apply-src/skills/* 你的项目目录/.dsh/skills/
 
 1. `Code` → `Download ZIP` → 解压
 2. DSH 打开 **Settings → Skills → 导入**
-3. 选"导入文件夹"，选中解压目录里的 `skills/euro-grad-apply` **这个子文件夹**（不是最外层目录）
-4. 保存后重启
+3. 选"导入文件夹"，选中解压目录里 `skills/` 下的 **`euro-grad-apply`**（主 skill，必须先装）
+4. 想要 5 个斜杠命令的话，**再重复导入 `skills/` 下的另外 5 个文件夹**（`euro-school`、`euro-docs`、`euro-phd`、`euro-apply`、`euro-visa`）
+5. 保存后重启
+
+> ⚠️ 5 个场景命令依赖主 skill 的资料，**必须先装 `euro-grad-apply`**，否则它们读不到内容。只装主 skill 也能正常用（自然语言提问即可），只是没有斜杠命令。
 
 #### WorkBuddy
 
@@ -121,16 +124,24 @@ cp -r ~/euro-grad-apply-src/skills/* ~/.workbuddy/skills/
    - **macOS**：Finder 按 `Cmd+Shift+G`，输入 `~/.workbuddy/skills` 回车
    - **Windows**：地址栏输入 `%USERPROFILE%\.workbuddy\skills`
    - 目录不存在就手动建一个 `skills` 文件夹
-3. 把解压目录里 `skills/` 下的所有文件夹拖进去
+3. 把解压目录里 `skills/` 下的**所有 6 个文件夹**一起拖进去
 4. 重启 WorkBuddy
 
-装完应该长这样：
+装完应该长这样（`euro-grad-apply` 是主 skill，另外 5 个是斜杠命令）：
 
 ```
-~/.workbuddy/skills/euro-grad-apply/SKILL.md
-~/.workbuddy/skills/euro-school/SKILL.md
-...
+~/.workbuddy/skills/
+├── euro-grad-apply/        ← 主 skill，必须有
+│   ├── SKILL.md
+│   └── references/         ← 26 个专题文件都在这
+├── euro-school/SKILL.md
+├── euro-docs/SKILL.md
+├── euro-phd/SKILL.md
+├── euro-apply/SKILL.md
+└── euro-visa/SKILL.md
 ```
+
+> ⚠️ 5 个场景命令的资料都存在主 skill 的 `references/` 里，**不要只拖场景文件夹**，否则它们读不到内容。
 
 ---
 
