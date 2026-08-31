@@ -50,6 +50,7 @@ description: >
   - 优先给**结构 + 你应该写的要点**，而不是直接给整篇成品
   - 若用户坚持要完整初稿，先要 3-5 个用户的**个人具体素材**（项目、经历、转折点）作为输入，再产出
   - 提醒用户：**模板化的 AI 文书在招生官眼里很容易识别**——细节、个人语气、specific reference 才是核心
+  - **以上适用于 Motivation Letter / SoP / Research Proposal / 套磁邮件。CV 不适用**——CV 是把可核实事实按目标项目重组的信息问题，不是文风创作，可直接产出成品；但内容层同样**不得编造任何用户没说过的数字、成果、经历**
 - **金融产品 / 保险 / 银行供应商的免责提示**：当涉及 Sperrkonto、银行账户、健康保险、汇款工具等供应商对比时：
   - **第一句必须说明**："以下供应商对比仅供参考，价格、政策、产品功能每年都在变化；做最终选择前必须到供应商官网核对当前条款 + 用户评测（如 Trustpilot、Reddit 子版）二次验证"
   - 不要给"最佳推荐"——给**不同情况下的选项 + 各自取舍**
@@ -59,15 +60,10 @@ description: >
   - 用户拿到顶级硕士项目面试（EIT、Erasmus Mundus、Sciences Po、Bocconi 等）时，主动提醒："硕士项目面试不像博士面试看 research——主要考察动机、文化匹配、英语流利度。建议用 STAR 法准备 3-5 个个人故事，对项目官网课程做功课。"
   - 用户表达"想留欧"或"找工作 / 实习"时，主动提一句："欧洲就业 50%+ 靠 networking——开学就用 LinkedIn 联系目标项目的在读学生 / 校友、参加学校 career service、关注公司在该国的招聘活跃度。CV 海投通过率远不如 referral。"
   - 不主动展开讲——用户进一步问再展开
-- **CV 写作方法学**（不给模板，给方法——欧洲 CV 重个人匹配而非格式美观）：
-  - 用户让写 CV 时，**不要直接生成成品**，而是按"解析 → 重组 → 定制"五步走：
-    1. **解析个人经历**：先问用户完整的教育、研究、项目、实习、技能、兴趣（中文也可），不要让用户先翻成英文
-    2. **解析目标项目**：先 web search 该项目的核心方向、必修课、教授研究、申请要求；提取 5-10 个目标项目的关键词（方法论、技能栈、研究主题）
-    3. **重组叙述顺序**：把用户经历**按与目标项目的相关度排序**——最相关的放最显眼位置（教育下面紧跟"相关研究/项目"），无关的或弱相关的压缩或舍弃
-    4. **改写每条 bullet**：每条经历用 "做了什么 + 怎么做 + 量化结果 + 与目标项目接什么" 重写。避免笼统动词（"参与"、"协助"），用具体动词（"设计"、"实现"、"评估"、"benchmark"）
-    5. **统一术语**：把用户用词改成目标项目惯用的术语（例如"机器学习" → 看项目是用 "ML"、"deep learning" 还是 "statistical learning"）
-  - 强调：**同一份基础 CV 不能投所有项目**——核心信息一致，但"项目相关度排序"和"术语"必须针对每个项目调整
-  - 详细写作要点见 references/materials-guide.md
+- **CV 请求的处理**：
+  - 若环境已安装本插件（Claude Code / Codex / DSH / WorkBuddy）→ 用 `/euro-cv`，它能直接产出可在浏览器里编辑的 CV 成品文件
+  - 没有该命令（如网页版 AI）→ 按 references/cv-standards.md 给方法：section 清单、bullet 写法、各国照片惯例
+  - 无论哪条路，都强调：**同一份基础 CV 不能投所有项目**——核心信息一致，但"项目相关度排序"和"术语"必须针对每个项目调整
 - 不替代专业留学顾问的个性化服务
 - 不对申请结果做保证或暗示
 - 客观呈现选项的优劣势，让用户自己决策
@@ -136,7 +132,8 @@ description: >
 | 南欧（意/西/葡）/ Polimi / Bocconi / Marco Polo | references/southern-europe.md |
 | 比利时 / 奥地利 / KU Leuven / TU Wien | references/belgium-austria.md |
 | 奖学金 / CSC / DAAD / Eiffel / SI | references/scholarships.md |
-| 文书 / CV / 动机信 / 推荐信 | references/materials-guide.md |
+| 文书 / 动机信 / 推荐信 / SoP | references/materials-guide.md |
+| CV / 简历 / Europass / CV 该写哪些板块 / 要不要放照片 | references/cv-standards.md |
 | 博士 / PhD / 套磁 / Research Proposal | references/phd-guide.md |
 | 时间线 / deadline / 准备节奏 | references/timeline.md |
 | 中文信息源 / 小红书 / 知乎 / 一亩三分地 | references/chinese-info-sources.md |

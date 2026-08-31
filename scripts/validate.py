@@ -17,6 +17,9 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 MAIN_SKILL = REPO / "skills" / "euro-grad-apply"
 REFS_DIR = MAIN_SKILL / "references"
+# ⚠️ 约定：所有 reference 只放在 euro-grad-apply/references/ 这一处。
+#    场景 skill（euro-cv 等）不建自己的 references/——下面第 5 项把每个
+#    references/xxx.md 引用都拿这个硬编码路径去查，别处同名文件会误报"引用不存在"。
 MERGED = REPO / "euro-grad-apply-full.md"
 PLUGIN_JSONS = [
     REPO / ".claude-plugin" / "plugin.json",
@@ -132,7 +135,7 @@ if skill_texts and not errors:
     notes.append(f"{len(skill_texts)} 个 SKILL.md 的 frontmatter 合法且 name 与目录名一致")
 
 # ---------- 5. references 引用存在性 ----------
-ref_pattern = re.compile(r"(?:\.\./euro-grad-apply/)?references/([a-z0-9-]+\.md)")
+ref_pattern = re.compile(r"(?:\.\./euro-grad-apply/)?references/([A-Za-z0-9._-]+\.md)")
 referenced: set[str] = set()
 for sf, text in skill_texts.items():
     for fname in ref_pattern.findall(text):
@@ -172,6 +175,32 @@ else:
             notes.append("合并单文件与源文件同步")
     finally:
         tmp_path.unlink(missing_ok=True)
+
+# ---------- 8. 可执行资产完整性 ----------
+# CV 模板是全仓库唯一的非 markdown 资产。它被误删或改坏时，
+# 用户侧的表现是"AI 说生成好了，双击打开是白屏"——功能唯一的静默失效模式。
+CV_TEMPLATE = REPO / "skills" / "euro-cv" / "assets" / "cv-template.html"
+if not CV_TEMPLATE.exists():
+    fail(f"CV 模板缺失: {CV_TEMPLATE.relative_to(REPO)}（/euro-cv 将无法工作）")
+else:
+    tpl = CV_TEMPLATE.read_text(encoding="utf-8")
+    tpl_errs = []
+    if 'id="cv-data"' not in tpl:
+        tpl_errs.append('缺少 id="cv-data" 数据块')
+    n_ph = tpl.count('{"__placeholder__":true}')
+    if n_ph != 1:
+        tpl_errs.append(f'占位符 {{"__placeholder__":true}} 出现 {n_ph} 次（必须恰好 1 次，'
+                        f'否则 AI 的单次替换会失败或替换错位置）')
+    if not tpl.rstrip().endswith("</html>"):
+        tpl_errs.append("文件未以 </html> 结尾（可能被截断）")
+    if "http://" in tpl or "https://" in tpl.replace(
+            "https://github.com/Harry-Sun0529/euro-grad-apply", ""):
+        tpl_errs.append("含外部资源引用——模板必须自包含，否则用户断网时打不开")
+    if tpl_errs:
+        for e in tpl_errs:
+            fail(f"CV 模板: {e}")
+    else:
+        notes.append(f"CV 模板完整（{len(tpl.splitlines())} 行，自包含无外链）")
 
 # ---------- 汇总 ----------
 print("=" * 60)

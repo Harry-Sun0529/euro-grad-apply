@@ -10,8 +10,8 @@
       "name": "euro-grad-apply",
       "source": "./",
       "displayName": "欧洲留学申请助手",
-      "description": "面向中国学生的欧洲大陆（非英国）硕士 / 博士申请助手。5 个命令覆盖全流程：/euro-school 选国选校、/euro-docs 文书、/euro-phd 博士套磁、/euro-apply 申请系统、/euro-visa 签证行前。覆盖德国、荷兰、北欧、瑞士、法国、南欧、比利时/奥地利，含 APS、CSSD 学信网、留服认证、CSC、DAAD、Erasmus Mundus、EIT 等中国学生特定流程。",
-      "version": "1.0.0",
+      "description": "面向中国学生的欧洲大陆（非英国）硕士 / 博士申请助手。6 个命令覆盖全流程：/euro-school 选国选校、/euro-docs 文书、/euro-cv 生成可编辑 CV 成品、/euro-phd 博士套磁、/euro-apply 申请系统、/euro-visa 签证行前。覆盖德国、荷兰、北欧、瑞士、法国、南欧、比利时/奥地利，含 APS、CSSD 学信网、留服认证、CSC、DAAD、Erasmus Mundus、EIT 等中国学生特定流程。",
+      "version": "1.1.0",
       "author": {
         "name": "Harry-Sun0529",
         "url": "https://github.com/Harry-Sun0529"

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CV</title>
+<!--
+  欧洲学术 CV 模板 · euro-grad-apply
+  https://github.com/Harry-Sun0529/euro-grad-apply
+
+  这个文件是自包含的：没有外链、没有 CDN、没有依赖。
+  数据在下面的 <script type="application/json" id="cv-data"> 里。
+  AI 生成时只替换那一个占位符，其余字节不动。
+-->
+<style>
+  :root{
+    --font:"Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    --size-name:21pt; --size-section:10.5pt; --size-body:10pt;
+    --accent:#1a4d8f; --text:#222; --muted:#666;
+    --lh:1.45; --gap-section:15px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#e9e9ec;font-family:var(--font);color:var(--text)}
+
+  /* ---------- 工具栏（打印时隐藏） ---------- */
+  #bar{position:sticky;top:0;z-index:99;background:#fff;border-bottom:1px solid #d0d0d5;
+    padding:9px 14px;display:flex;gap:6px;align-items:center;flex-wrap:wrap;
+    box-shadow:0 1px 6px rgba(0,0,0,.09);font-size:13px}
+  #bar button{padding:5px 11px;border:1px solid #ccc;background:#fff;border-radius:5px;
+    cursor:pointer;font-size:13px;font-family:inherit;white-space:nowrap}
+  #bar button:hover{background:#f2f2f5}
+  #bar .primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+  #bar .sep{width:1px;height:20px;background:#ddd;margin:0 3px}
+  #msg{margin-left:auto;color:var(--muted);font-size:12px;max-width:40%;text-align:right}
+
+  /* ---------- 提示条 ---------- */
+  .notice{max-width:210mm;margin:12px auto 0;padding:11px 15px;border-radius:6px;
+    font-size:13px;line-height:1.6;display:none}
+  .notice.show{display:block}
+  .notice button{margin-left:8px;padding:3px 10px;border:1px solid currentColor;
+    background:transparent;border-radius:4px;cursor:pointer;font-size:12px;
+    font-family:inherit;color:inherit}
+  #restore-bar{background:#fff8e1;border:1px solid #f0c36d;color:#7a5c00}
+  #err-bar{background:#fdecea;border:1px solid #f0a9a3;color:#8c1d13}
+  #print-tip{background:#e8f2fc;border:1px solid #a8cbef;color:#154a80}
+
+  /* ---------- 纸张 ---------- */
+  .page{width:210mm;min-height:297mm;margin:14px auto;background:#fff;
+    padding:15mm 17mm;box-shadow:0 2px 14px rgba(0,0,0,.14);
+    font-size:var(--size-body);line-height:var(--lh)}
+
+  .hd{display:flex;gap:16px;align-items:flex-start}
+  .hd-main{flex:1;min-width:0}
+  .name{font-size:var(--size-name);font-weight:600;letter-spacing:.3px}
+  .contact{font-size:9pt;color:var(--muted);margin-top:5px;line-height:1.6}
+  .contact span:not(:last-child)::after{content:" · "}
+
+  /* 照片：body[data-photo] 控制显隐 */
+  #photo-box{width:30mm;flex-shrink:0;display:none}
+  body[data-photo="on"] #photo-box{display:block}
+  #photo-box img{width:100%;border-radius:3px;display:none}
+  #photo-box img.has{display:block}
+  #photo-ph{width:100%;aspect-ratio:3/4;border:1.5px dashed #bbb;border-radius:3px;
+    display:flex;align-items:center;justify-content:center;color:#aaa;
+    font-size:11px;text-align:center;cursor:pointer;padding:6px}
+  #photo-box img.has ~ #photo-ph{display:none}
+
+  h2{font-size:var(--size-section);color:var(--accent);text-transform:uppercase;
+    letter-spacing:.9px;border-bottom:1.4px solid var(--accent);
+    padding-bottom:3px;margin:var(--gap-section) 0 7px}
+  .entry{margin-bottom:9px}
+  .entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .entry-title{font-weight:600;min-width:0}
+  .entry-meta{font-size:9pt;color:var(--muted);white-space:nowrap;flex-shrink:0}
+  .entry-sub{font-size:9.5pt;color:var(--muted);font-style:italic;margin-bottom:2px}
+  .entry ul{margin:3px 0 0 16px}
+  .entry li{margin-bottom:2px}
+
+  [contenteditable="true"]:hover{background:#fffdf0;outline:1px dashed #d9b64e}
+  [contenteditable="true"]:focus{background:#fff;outline:2px solid var(--accent)}
+
+  /* ---------- 打印 ----------
+     边距交给 @page 而不是 .page 的 padding：
+     padding 只在元素首尾生效，内容溢出到第 2 页时顶部会没有边距、文字贴纸边。 */
+  @page{size:A4;margin:14mm 16mm}
+  @media print{
+    body{background:#fff}
+    #bar,.notice{display:none !important}
+    .page{margin:0;padding:0;width:auto;min-height:auto;box-shadow:none}
+    [contenteditable="true"]:hover{background:none;outline:none}
+    h2{break-after:avoid;page-break-after:avoid}
+    .entry{break-inside:avoid;page-break-inside:avoid}
+    #photo-ph{display:none !important}
+  }
+</style>
+</head>
+<body data-photo="off">
+
+<div id="bar">
+  <button onclick="cmd('bold')" title="加粗"><b>B</b></button>
+  <button onclick="cmd('italic')" title="斜体"><i>I</i></button>
+  <button onclick="cmd('undo')" title="撤销">↶</button>
+  <button onclick="cmd('redo')" title="重做">↷</button>
+  <span class="sep"></span>
+  <button onclick="fontStep(0.5)">A+</button>
+  <button onclick="fontStep(-0.5)">A−</button>
+  <button onclick="togglePhoto()" id="photo-btn">📷 照片</button>
+  <span class="sep"></span>
+  <button onclick="exportJSON()" title="把当前内容导回 JSON，贴给 AI 可同步经历库">⬆️ 导出 JSON</button>
+  <button onclick="resetOriginal()" title="丢弃所有修改，回到 AI 生成时的版本">↺ 还原</button>
+  <button onclick="saveHTML()">💾 保存</button>
+  <button class="primary" onclick="doPrint()">📄 导出 PDF</button>
+  <span id="msg">就绪</span>
+</div>
+
+<div class="notice" id="err-bar"></div>
+<div class="notice" id="restore-bar"></div>
+<div class="notice" id="print-tip">
+  <b>打印前请确认</b>：在打印对话框里勾选「<b>背景图形</b>」（Chrome 在「更多设置」里），
+  否则标题的蓝色线条不会打印出来。另请看一眼预览，确认没有哪段经历被切到两页上。
+  <button onclick="this.parentNode.classList.remove('show')">知道了</button>
+</div>
+
+<div class="page" id="cv"></div>
+
+<input type="file" id="photo-input" accept="image/*" style="display:none">
+
+<script type="application/json" id="cv-data">{"__placeholder__":true}</script>
+
+<script>
+"use strict";
+
+/* ============ 存储：全部包 try/catch ============
+   Safari 在 file:// 下访问 localStorage 会抛异常。
+   原型里是顶层裸调用，一 throw 后面脚本全部中止 → 白屏。
+   这里降级为「自动保存不可用」，编辑功能照常可用。 */
+var storeOK = true;
+function sGet(k){ try{ return localStorage.getItem(k); }catch(e){ storeOK=false; return null; } }
+function sSet(k,v){ try{ localStorage.setItem(k,v); return true; }catch(e){ storeOK=false; return false; } }
+function sDel(k){ try{ localStorage.removeItem(k); }catch(e){} }
+
+var DATA=null, CV=document.getElementById('cv'), KEY=null, ORIGINAL_HTML='';
+
+function msg(t,isErr){
+  var m=document.getElementById('msg');
+  m.textContent=t; m.style.color=isErr?'#c0392b':'#666';
+}
+function showNotice(id,html){
+  var n=document.getElementById(id); n.innerHTML=html; n.classList.add('show');
+}
+
+/* 转义：& < > " ' 全转。
+   原型只转了前三个——一旦有值进入 HTML 属性位就会被击穿。 */
+function esc(s){
+  return String(s==null?'':s).replace(/[&<>"']/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+
+/* ============ 渲染 ============ */
+function paint(d){
+  var h='<div class="hd"><div class="hd-main">'
+      + '<div class="name" contenteditable="true">'+esc(d.name)+'</div>'
+      + '<div class="contact" contenteditable="true">'
+      + (d.contact||[]).map(function(c){return '<span>'+esc(c)+'</span>';}).join('')
+      + '</div></div>'
+      + '<div id="photo-box"><img id="photo-img" alt="">'
+      + '<div id="photo-ph" onclick="pickPhoto()">点击<br>上传照片</div></div></div>';
+
+  (d.sections||[]).forEach(function(s){
+    h+='<h2 contenteditable="true">'+esc(s.title)+'</h2>';
+    (s.entries||[]).forEach(function(e){
+      h+='<div class="entry">';
+      if(e.title||e.meta){
+        h+='<div class="entry-head"><span class="entry-title" contenteditable="true">'
+          +esc(e.title||'')+'</span><span class="entry-meta" contenteditable="true">'
+          +esc(e.meta||'')+'</span></div>';
+      }
+      if(e.sub) h+='<div class="entry-sub" contenteditable="true">'+esc(e.sub)+'</div>';
+      if(e.bullets&&e.bullets.length){
+        h+='<ul contenteditable="true">'
+          +e.bullets.map(function(b){return '<li>'+esc(b)+'</li>';}).join('')+'</ul>';
+      }
+      h+='</div>';
+    });
+  });
+  CV.innerHTML=h;
+}
+
+/* ============ DOM → JSON（决策 10 的闭环） ============
+   没有这个，用户在浏览器里的修改就死在 HTML 里，
+   AI 下次拿到的还是旧数据，多版本复用第二次就失真。 */
+function domToData(){
+  var out={
+    meta: (DATA&&DATA.meta)||{},
+    name: (CV.querySelector('.name')||{}).textContent||'',
+    contact: [].map.call(CV.querySelectorAll('.contact span'),function(s){return s.textContent.trim();})
+             .filter(Boolean),
+    sections: []
+  };
+  var cur=null;
+  [].forEach.call(CV.children, function(node){
+    if(node.tagName==='H2'){
+      cur={title:node.textContent.trim(), entries:[]};
+      out.sections.push(cur);
+    } else if(node.classList&&node.classList.contains('entry')&&cur){
+      var t=node.querySelector('.entry-title'), m=node.querySelector('.entry-meta'),
+          sb=node.querySelector('.entry-sub'), lis=node.querySelectorAll('li');
+      cur.entries.push({
+        title: t?t.textContent.trim():'',
+        meta:  m?m.textContent.trim():'',
+        sub:   sb?sb.textContent.trim():'',
+        bullets: [].map.call(lis,function(li){return li.textContent.trim();}).filter(Boolean)
+      });
+    }
+  });
+  var img=document.getElementById('photo-img');
+  out.meta.photo = document.body.getAttribute('data-photo');
+  if(img&&img.classList.contains('has')) out.meta._has_photo=true;
+  return out;
+}
+
+function exportJSON(){
+  var txt=JSON.stringify(domToData(),null,2);
+  var w=window.open('','_blank','width=680,height=560');
+  if(!w){ msg('浏览器拦截了弹窗，请允许后重试',true); return; }
+  w.document.write('<meta charset="utf-8"><title>导出的 JSON</title>'
+    +'<p style="font:13px/1.6 sans-serif;color:#444;margin:12px">'
+    +'全选复制，贴给 AI 即可同步你的经历库。</p>'
+    +'<textarea style="width:96%;height:80%;margin:0 12px;font:12px monospace">'
+    +txt.replace(/</g,'&lt;')+'</textarea>');
+  w.document.close();
+  msg('已导出，复制后贴给 AI');
+}
+
+/* ============ 草稿：key 带命名空间 ============
+   file:// 下所有 HTML 共享同一个 localStorage 域。
+   原型用固定 key 'cv-draft'，会导致打开 ETH 版时
+   被灌进 TUM 版的内容，用户毫不知情。 */
+function saveDraft(){
+  if(!KEY) return;
+  if(sSet(KEY, JSON.stringify({html:CV.innerHTML, at:Date.now(),
+      photo:document.body.getAttribute('data-photo')}))){
+    msg('✓ 已自动保存');
+  } else {
+    msg('自动保存不可用，改完请点 💾 保存', true);
+  }
+}
+
+function resetOriginal(){
+  if(!confirm('丢弃所有修改，回到 AI 生成时的版本？')) return;
+  CV.innerHTML=ORIGINAL_HTML;
+  bindEditing();
+  sDel(KEY);
+  document.getElementById('restore-bar').classList.remove('show');
+  msg('已还原');
+}
+
+/* ============ 编辑 ============ */
+function cmd(c){ document.execCommand(c,false,null); saveDraft(); }
+function fontStep(d){
+  var r=document.documentElement;
+  var cur=parseFloat(getComputedStyle(r).getPropertyValue('--size-body'))||10;
+  var v=Math.min(13,Math.max(8,cur+d));
+  r.style.setProperty('--size-body',v+'pt');
+  msg('正文字号 '+v.toFixed(1)+'pt');
+}
+
+/* 粘贴强制转纯文本：
+   从 Word/网页粘贴会带 <span style="font-family:宋体;color:red">，
+   污染排版且用户无法自己清理，也会让 DOM→JSON 导出产出垃圾。 */
+function bindEditing(){
+  CV.addEventListener('paste', function(e){
+    e.preventDefault();
+    var t=(e.clipboardData||window.clipboardData).getData('text/plain');
+    document.execCommand('insertText', false, t);
+  });
+  CV.addEventListener('input', saveDraft);
+}
+
+/* ============ 照片：用户上传，绝不经过 AI ============
+   一张 200KB 证件照转 base64 约 27 万字符，
+   经过模型必然转录出错，且白烧 token。 */
+function togglePhoto(){
+  var on=document.body.getAttribute('data-photo')==='on';
+  document.body.setAttribute('data-photo', on?'off':'on');
+  msg(on?'已隐藏照片':'已显示照片位，点虚线框上传');
+  saveDraft();
+}
+function pickPhoto(){ document.getElementById('photo-input').click(); }
+
+document.getElementById('photo-input').addEventListener('change', function(ev){
+  var f=ev.target.files[0]; if(!f) return;
+  var rd=new FileReader();
+  rd.onload=function(){
+    var im=new Image();
+    im.onload=function(){
+      // 压到宽 ≤400px 再存，否则 localStorage 5MB 配额很容易撑爆
+      var W=Math.min(400,im.width), H=Math.round(im.height*W/im.width);
+      var cvs=document.createElement('canvas'); cvs.width=W; cvs.height=H;
+      cvs.getContext('2d').drawImage(im,0,0,W,H);
+      var el=document.getElementById('photo-img');
+      el.src=cvs.toDataURL('image/jpeg',0.85);
+      el.classList.add('has');
+      document.body.setAttribute('data-photo','on');
+      saveDraft();
+      msg('照片已插入');
+    };
+    im.onerror=function(){ msg('这个图片文件读不了，换一张试试',true); };
+    im.src=rd.result;
+  };
+  rd.readAsDataURL(f);
+});
+
+/* ============ 保存 / 打印 ============ */
+function saveHTML(){
+  var name=(document.title||'CV')+'.html';
+  var blob=new Blob(['<!DOCTYPE html>\n'+document.documentElement.outerHTML],
+                    {type:'text/html;charset=utf-8'});
+  if(window.showSaveFilePicker){
+    window.showSaveFilePicker({suggestedName:name,
+      types:[{description:'HTML',accept:{'text/html':['.html']}}]})
+    .then(function(h){ return h.createWritable(); })
+    .then(function(w){ return w.write(blob).then(function(){return w.close();}); })
+    .then(function(){ msg('✅ 已保存'); })
+    .catch(function(e){ if(e.name!=='AbortError') fallbackSave(blob,name); });
+  } else fallbackSave(blob,name);
+}
+function fallbackSave(blob,name){
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download=name; a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);},1000);
+  msg('✅ 已下载 '+name);
+}
+function doPrint(){
+  document.getElementById('print-tip').classList.add('show');
+  setTimeout(function(){ window.print(); }, 400);
+}
+
+/* ============ 启动 ============ */
+(function init(){
+  var raw=document.getElementById('cv-data').textContent;
+  try{
+    DATA=JSON.parse(raw);
+  }catch(e){
+    showNotice('err-bar','<b>数据块解析失败</b>：'+esc(e.message)
+      +'<br>请把这条错误信息发回给 AI，让它重新生成一次。');
+    msg('数据有误',true); return;
+  }
+  if(DATA.__placeholder__){
+    showNotice('err-bar','<b>这是空白模板</b>，还没有填入内容。'
+      +'<br>请让 AI 用 <code>/euro-cv</code> 生成你的 CV，不要直接打开模板文件。');
+    msg('未填充',true); return;
+  }
+
+  var meta=DATA.meta||{};
+  if(meta.doc_title) document.title=meta.doc_title;
+  if(meta.photo==='on') document.body.setAttribute('data-photo','on');
+  KEY='cv-draft:'+(meta.cv_id||meta.doc_title||'default');
+
+  paint(DATA);
+  ORIGINAL_HTML=CV.innerHTML;
+  bindEditing();
+
+  // 不静默恢复草稿——让用户自己选，否则改坏了无从察觉
+  var saved=sGet(KEY);
+  if(saved){
+    try{
+      var d=JSON.parse(saved);
+      var t=new Date(d.at);
+      var when=(t.getMonth()+1)+'月'+t.getDate()+'日 '
+               +String(t.getHours()).padStart(2,'0')+':'
+               +String(t.getMinutes()).padStart(2,'0');
+      showNotice('restore-bar','检测到这份 CV 上次的编辑（'+when+'）。'
+        +'<button onclick="applyDraft()">恢复</button>'
+        +'<button onclick="dropDraft()">用 AI 生成的原始版本</button>');
+    }catch(e){ sDel(KEY); }
+  }
+  if(!storeOK) msg('当前浏览器不支持自动保存，改完请点 💾 保存');
+  else msg(meta.target?('已就绪 · '+meta.target):'已就绪，点任意文字即可修改');
+})();
+
+function applyDraft(){
+  try{
+    var d=JSON.parse(sGet(KEY));
+    CV.innerHTML=d.html;
+    if(d.photo) document.body.setAttribute('data-photo',d.photo);
+    bindEditing();
+    msg('已恢复上次编辑');
+  }catch(e){ msg('恢复失败',true); }
+  document.getElementById('restore-bar').classList.remove('show');
+}
+function dropDraft(){
+  sDel(KEY);
+  document.getElementById('restore-bar').classList.remove('show');
+  msg('已使用原始版本');
+}
+</script>
+</body>
+</html>

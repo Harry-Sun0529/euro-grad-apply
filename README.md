@@ -68,10 +68,10 @@ mkdir -p ~/.workbuddy/skills && cp -r ~/euro-src/skills/* ~/.workbuddy/skills/
 2. 打开你 AI 的 skills 目录：
    - **WorkBuddy**：macOS 在 Finder 按 `Cmd+Shift+G` 输入 `~/.workbuddy/skills`；Windows 地址栏输入 `%USERPROFILE%\.workbuddy\skills`
    - **DSH**：Settings → Skills → 导入文件夹
-3. 把解压后 `skills/` 里的 **6 个文件夹全部**拖进去
+3. 把解压后 `skills/` 里的 **7 个文件夹全部**拖进去
 4. 重启
 
-> ⚠️ 必须 6 个一起装。5 个斜杠命令的资料都存在 `euro-grad-apply/references/` 里，只装命令文件夹会读不到内容。
+> ⚠️ 必须 7 个一起装。6 个斜杠命令的资料都存在 `euro-grad-apply/references/` 里，只装命令文件夹会读不到内容。
 
 **方法 B：用 Kimi / 豆包 / ChatGPT 等网页版 AI**
 
@@ -92,12 +92,13 @@ mkdir -p ~/.workbuddy/skills && cp -r ~/euro-src/skills/* ~/.workbuddy/skills/
 
 ## 🎯 装完能干什么
 
-**直接问就行**，AI 会自动判断该看哪部分。装了插件的话还有 5 个快捷命令：
+**直接问就行**，AI 会自动判断该看哪部分。装了插件的话还有 6 个快捷命令：
 
 | 命令 | 什么时候用 | 举例 |
 |---|---|---|
 | `/euro-school` | 选国选校 | "我这背景能申什么学校""德国还是荷兰" |
-| `/euro-docs` | 写文书 | "动机信怎么写""CV 怎么改" |
+| `/euro-docs` | 写文书 | "动机信怎么写""SoP 怎么改" |
+| `/euro-cv` | 做简历 | "帮我做一份投 TUM 的 CV""简历该放照片吗" |
 | `/euro-phd` | 申博士 | "怎么套磁""博士有工资吗" |
 | `/euro-apply` | 走申请流程 | "Uni-assist 怎么填""APS 怎么办" |
 | `/euro-visa` | 拿到 offer 后 | "签证怎么办""资金证明""落地做什么" |
@@ -147,7 +148,7 @@ mkdir -p ~/.workbuddy/skills && cp -r ~/euro-src/skills/* ~/.workbuddy/skills/
 skills/
 ├── euro-grad-apply/            # 主 skill（必装）
 │   ├── SKILL.md
-│   └── references/             # 26 个专题文件
+│   └── references/             # 27 个专题文件
 │       ├── germany.md          # 各国指南
 │       ├── career-goals.md     # 毕业目标导向择校
 │       ├── china-specific-procedures.md  # APS / CSSD / 留服认证
@@ -155,12 +156,15 @@ skills/
 │       └── ...
 ├── euro-school/                # /euro-school
 ├── euro-docs/                  # /euro-docs
+├── euro-cv/                    # /euro-cv（含 assets/cv-template.html）
 ├── euro-phd/                   # /euro-phd
 ├── euro-apply/                 # /euro-apply
 └── euro-visa/                  # /euro-visa
 
 euro-grad-apply-full.md         # 全部内容合并单文件（自动生成）
 ```
+
+> 所有专题资料只放在 `euro-grad-apply/references/` 一处，场景 skill 不建自己的 `references/`。
 
 ---
 
