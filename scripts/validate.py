@@ -177,9 +177,10 @@ else:
         tmp_path.unlink(missing_ok=True)
 
 # ---------- 8. 可执行资产完整性 ----------
-# CV 模板是全仓库唯一的非 markdown 资产。它被误删或改坏时，
-# 用户侧的表现是"AI 说生成好了，双击打开是白屏"——功能唯一的静默失效模式。
+# CV 模板和注入器是 /euro-cv 的核心可执行资产。它们被误删或改坏时，
+# 用户侧的表现是"AI 说生成好了，双击打开是白屏"或无法安全生成文件。
 CV_TEMPLATE = REPO / "skills" / "euro-cv" / "assets" / "cv-template.html"
+CV_INJECTOR = REPO / "skills" / "euro-cv" / "assets" / "cv_inject.py"
 if not CV_TEMPLATE.exists():
     fail(f"CV 模板缺失: {CV_TEMPLATE.relative_to(REPO)}（/euro-cv 将无法工作）")
 else:
@@ -190,7 +191,7 @@ else:
     n_ph = tpl.count('{"__placeholder__":true}')
     if n_ph != 1:
         tpl_errs.append(f'占位符 {{"__placeholder__":true}} 出现 {n_ph} 次（必须恰好 1 次，'
-                        f'否则 AI 的单次替换会失败或替换错位置）')
+                        f'否则注入器会失败或替换错位置）')
     if not tpl.rstrip().endswith("</html>"):
         tpl_errs.append("文件未以 </html> 结尾（可能被截断）")
     if "http://" in tpl or "https://" in tpl.replace(
@@ -201,6 +202,16 @@ else:
             fail(f"CV 模板: {e}")
     else:
         notes.append(f"CV 模板完整（{len(tpl.splitlines())} 行，自包含无外链）")
+
+if not CV_INJECTOR.exists():
+    fail(f"CV 注入器缺失: {CV_INJECTOR.relative_to(REPO)}（/euro-cv 将无法安全生成）")
+else:
+    try:
+        compile(CV_INJECTOR.read_text(encoding="utf-8"), str(CV_INJECTOR), "exec")
+    except SyntaxError as e:
+        fail(f"CV 注入器语法错误: {e}")
+    else:
+        notes.append("CV 注入器存在且可编译")
 
 # ---------- 汇总 ----------
 print("=" * 60)

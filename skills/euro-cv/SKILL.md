@@ -63,14 +63,17 @@ web search 官网主页 + 课程列表。研究型硕士 / 博士**追加**教�
 
 1. 按阶段 A 的关键词**重排序**（最相关的放最显眼位置）、**改写 bullet**、**统一术语**（项目用 "statistical learning" 就别写 "机器学习"）
 2. 照片：按目标国查 cv-standards.md §4 预设 `meta.photo`，德奥瑞南欧默认 `"on"`，英荷北欧默认 `"off"`，并说明这是惯例非硬性要求
-3. **生成动作 = 复制模板 + 单次替换**：
+3. **生成动作 = 普通 JSON + 内置注入器**：
+   ```text
+   把最终数据先写成普通 JSON：./euro-cv/cv-<school>-<program>.json
+   调用随本 skill 分发的注入器：
+   python3 <插件目录>/skills/euro-cv/assets/cv_inject.py \
+     --template <插件目录>/skills/euro-cv/assets/cv-template.html \
+     --data ./euro-cv/cv-<school>-<program>.json \
+     --output ./euro-cv/cv-<school>-<program>.html
    ```
-   cp <插件目录>/skills/euro-cv/assets/cv-template.html ./euro-cv/cv-<school>-<program>.html
-   然后 Edit 目标文件：
-     old_string:  {"__placeholder__":true}
-     new_string:  <你生成的 JSON>
-   ```
-   ⚠️ **绝不要自己重写整个 HTML 文件**——200+ 行 CSS/JS 经过你的输出通道必然发生转录漂移，而且错了没有任何自动检测。`cp` 让模板字节永不过模型。
+   注入器直接读取插件内的只读模板并写出新成品，不需要先把模板复制到目标路径；这样不会在检查同名文件前覆盖用户已有成品。生成前仍要先 `ls euro-cv/`，同名的既有成品必须先询问用户覆盖还是改用 `-v2`；用户明确选择覆盖时才额外传 `--overwrite`。
+   ⚠️ **绝不要自己重写整个 HTML 文件，也不要直接 Edit `<script>` 数据块**——CSS/JS 经过模型输出通道容易发生转录漂移，手写转义也无法稳定防住 `</script>`。必须让随 skill 分发的 `assets/cv_inject.py` 负责 JSON 序列化、raw-text 安全编码、占位符校验和原子写入。注入器失败就停止，不退回不安全的直接替换；`cp` 让模板字节永不过模型。
 
 **交付话术必须包含：**
 - 文件的完整路径
@@ -115,11 +118,13 @@ web search 官网主页 + 课程列表。研究型硕士 / 博士**追加**教�
 - `doc_title` 会成为浏览器标题和 Ctrl+P 的默认文件名，用 `Lastname_Firstname_CV_School` 格式
 - Skills 类 section 用空 `title` + 纯 `bullets` 即可
 
-### 转义硬规则
+### 数据注入安全规则
 
-1. **所有 `<` 写成 `<`** —— 这是唯一能从 `<script>` 数据块里逃逸的序列。用户写 "延迟 <50ms" 或 "C++ < Rust" 时这条会救命
-2. **不出现裸换行** —— 多行内容拆成数组元素
-3. 中文、emoji、全角标点**直接写**，不转义（模板是 UTF-8，已实测无乱码）
+1. 普通经历数据先写入独立 JSON 文件，再交给 `assets/cv_inject.py` 注入模板；不要直接 Edit `<script type="application/json" id="cv-data">` 数据块
+2. 不把 `<` 改成 `&lt;`，也不要在模型输出中手写最终的 `\\u003c`；注入器会用 JSON Unicode escape 保护 `<`、`>`、`&`，浏览器解析后仍还原为原文
+3. 用户文本中出现 `</script>`、HTML 标签样式文本、引号、反斜杠、中文或 emoji 时，仍走同一注入器流程；注入器失败就停止，不使用不安全的直接替换 fallback
+4. 普通 JSON 里不出现裸换行；多行内容拆成数组元素
+5. 中文、emoji、全角标点直接写，不转义（模板是 UTF-8，已实测无乱码）
 
 ---
 

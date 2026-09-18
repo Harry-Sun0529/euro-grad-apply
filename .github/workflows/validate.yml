@@ -16,3 +16,6 @@ jobs:
 
       - name: Run validation
         run: python3 scripts/validate.py
+
+      - name: Run reliability tests
+        run: python3 -m unittest discover -s tests -v

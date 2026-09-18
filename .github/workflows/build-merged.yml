@@ -10,6 +10,7 @@ on:
       - 'skills/euro-grad-apply/SKILL.md'
       - 'skills/euro-grad-apply/references/**'
       - 'scripts/build-merged.sh'
+      - 'README.md'
   workflow_dispatch:
 
 jobs:

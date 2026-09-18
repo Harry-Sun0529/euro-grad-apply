@@ -9,13 +9,22 @@ set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SKILL_DIR="$REPO_ROOT/skills/euro-grad-apply"
+README="$REPO_ROOT/README.md"
 OUT="${1:-$REPO_ROOT/euro-grad-apply-full.md}"
+
+SNAPSHOT_LINE="$(grep -m1 -E '^> .*内容快照.*下次复审.*$' "$README" || true)"
+if [[ -z "$SNAPSHOT_LINE" ]]; then
+  echo "错误：README.md 缺少可解析的内容快照/下次复审行" >&2
+  exit 1
+fi
 
 {
   echo "# Euro Grad Apply · 全部内容合并版（单文件）"
   echo ""
-  echo "> 本文件由所有 \`.md\` 自动合并生成，供有\"知识库文件数上限\"或不想逐个上传多文件的 AI 平台使用。"
-  echo "> 只需上传这一个文件即可。**请勿手动编辑本文件**——它会在源文件更新时被自动覆盖。"
+  echo "$SNAPSHOT_LINE"
+  echo "> 本文件是给网页版 AI 知识库 / Projects 上传的单文件版本。它包含主 skill 与 references，不提供 slash command，也不具备文件读写能力。"
+  echo "> 需要生成可编辑 \`/euro-cv\` HTML 成品或使用场景命令时，请安装完整插件；本文件由源文件自动合并生成，**请勿手动编辑**。"
+  echo ""
   echo "> 源仓库：https://github.com/Harry-Sun0529/euro-grad-apply"
   echo ""
   echo "---"
