@@ -21,6 +21,7 @@ REFS_DIR = MAIN_SKILL / "references"
 #    场景 skill（euro-cv 等）不建自己的 references/——下面第 5 项把每个
 #    references/xxx.md 引用都拿这个硬编码路径去查，别处同名文件会误报"引用不存在"。
 MERGED = REPO / "euro-grad-apply-full.md"
+README = REPO / "README.md"
 PLUGIN_JSONS = [
     REPO / ".claude-plugin" / "plugin.json",
     REPO / ".codex-plugin" / "plugin.json",
@@ -153,6 +154,79 @@ if REFS_DIR.is_dir():
         fail(f"孤儿 reference（没有任何 SKILL.md 提到，AI 永远读不到）: {orphans}")
     else:
         notes.append(f"{len(on_disk)} 个 reference 均被至少一个 SKILL.md 引用，无孤儿")
+
+# ---------- 6. 反向孤儿检查 ----------
+if REFS_DIR.is_dir():
+    on_disk = {p.name for p in REFS_DIR.glob("*.md")}
+    orphans = sorted(on_disk - referenced)
+    if orphans:
+        fail(f"孤儿 reference（没有任何 SKILL.md 提到，AI 永远读不到）: {orphans}")
+    else:
+        notes.append(f"{len(on_disk)} 个 reference 均被至少一个 SKILL.md 引用，无孤儿")
+
+# ---------- 6b. 主 router 覆盖检查 ----------
+main_text = skill_texts.get(MAIN_SKILL / "SKILL.md", "")
+scene_commands = (
+    "/euro-school",
+    "/euro-docs",
+    "/euro-cv",
+    "/euro-phd",
+    "/euro-apply",
+    "/euro-visa",
+)
+missing_commands = [command for command in scene_commands if command not in main_text]
+if missing_commands:
+    fail(f"主 skill router 缺少场景命令: {missing_commands}")
+else:
+    notes.append("主 skill router 覆盖 6 个场景命令")
+
+missing_from_main = sorted(
+    fname for fname in (REFS_DIR.glob("*.md") if REFS_DIR.is_dir() else [])
+    if fname.name not in main_text
+)
+if missing_from_main:
+    fail(f"主 skill 兜底路由缺少 reference: {missing_from_main}")
+else:
+    notes.append("主 skill 兜底路由覆盖全部 reference")
+
+if not re.search(r"(?i)无命令|网页版.*reference|不具备文件读写", main_text):
+    fail("主 skill 缺少无命令环境的网页版降级声明")
+
+# ---------- 6c. 显式章节锚点检查 ----------
+anchor_pattern = re.compile(
+    r"(?:\.\./euro-grad-apply/)?references/([A-Za-z0-9._-]+\.md)[^\n]*?§(\d+(?:\.\d+)?)"
+)
+for sf, text in skill_texts.items():
+    for fname, section in anchor_pattern.findall(text):
+        target = REFS_DIR / fname
+        if not target.exists():
+            continue
+        headings = target.read_text(encoding="utf-8").splitlines()
+        section_pattern = re.compile(rf"^{'#' * (section.count('.') + 2)}\s+{re.escape(section)}(?:[.：:、\s]|$)")
+        if not any(section_pattern.search(line) for line in headings):
+            fail(f"{sf.relative_to(REPO)} 引用 {fname} §{section}，但目标章节不存在")
+if not any("§" in text for text in skill_texts.values()):
+    notes.append("未发现显式章节锚点")
+else:
+    notes.append("显式章节锚点检查完成")
+
+# ---------- 6d. README 快照字段检查 ----------
+snapshot_text = README.read_text(encoding="utf-8") if README.exists() else ""
+snapshot_match = re.search(
+    r"内容快照\*\*：(20\d\d)-(\d\d)\s+·\s+\*\*下次复审\*\*：(20\d\d)-(\d\d)",
+    snapshot_text,
+)
+if snapshot_match is None:
+    fail("README 缺少可解析的内容快照/下次复审字段")
+else:
+    sy, sm, ry, rm = (int(value) for value in snapshot_match.groups())
+    if not (1 <= sm <= 12 and 1 <= rm <= 12):
+        fail("README 快照月份非法")
+    months = (ry - sy) * 12 + rm - sm
+    if not (0 < months <= 6):
+        fail(f"README 快照与下次复审间隔应为 1-6 个月，实际为 {months} 个月")
+    else:
+        notes.append(f"README 快照字段合法（{sy:04d}-{sm:02d} → {ry:04d}-{rm:02d}）")
 
 # ---------- 7. 合并文件新鲜度 ----------
 build_sh = REPO / "scripts" / "build-merged.sh"

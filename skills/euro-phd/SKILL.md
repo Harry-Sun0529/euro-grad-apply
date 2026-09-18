@@ -3,7 +3,7 @@ name: euro-phd
 description: >
   欧洲博士申请。当用户输入 /euro-phd，或说"申博"、"读博"、"PhD 申请"、"套磁"、
   "怎么联系导师"、"博士面试"、"vacancy 怎么找"、"MSCA"、"雇佣制博士"、
-  "博士有工资吗"时触发。
+  "博士有工资吗"时触发。PhD application、contacting supervisors、funded PhD position。
 ---
 
 ## 这个命令做什么

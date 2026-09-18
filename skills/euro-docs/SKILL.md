@@ -1,9 +1,9 @@
 ---
 name: euro-docs
 description: >
-  欧洲留学申请文书。当用户输入 /euro-docs，或说"帮我写动机信"、"Motivation Letter 怎么写"、
-  "CV 怎么改"、"个人陈述"、"SoP"、"推荐信找谁写"、"Research Proposal 怎么写"、
-  "文书怎么润色"时触发。
+  欧洲留学申请文书与 CV 方法咨询。当用户输入 /euro-docs，或说"帮我写动机信"、"Motivation Letter 怎么写"、
+  "CV 怎么改"、"简历要放照片吗"、"CV 怎么导出 PDF"、"个人陈述"、"SoP"、"推荐信找谁写"、
+  "Research Proposal 怎么写"、"文书怎么润色"时触发。motivation letter、statement of purpose、recommendation letter help。
 ---
 
 ## 这个命令做什么
@@ -42,12 +42,11 @@ description: >
 5. 只在用户明确要求初稿时才产出，且必须基于他给的真实素材
 6. 产出后提醒：用你自己的语气重写一遍，加入 AI 不可能知道的细节
 
-### CV 请求转交 `/euro-cv`
+### CV 请求分流
 
-用户要 CV 时，先说明有更好的选择：`/euro-cv` 能直接产出可在浏览器里编辑的成品文件（点字即改，Ctrl+P 出 PDF），并且会先探查目标项目、让用户确认官网后再生成。
-
-- 用户同意 → 转交 `/euro-cv`
-- 用户只想要方法、或环境没有该命令 → 读 `../euro-grad-apply/references/cv-standards.md`，给 section 清单和 bullet 写法
+- 用户要**成品 CV 文件**且环境提供 `/euro-cv` → 转交 `/euro-cv`，由它执行项目探查、确认卡片和文件生成流程。
+- 用户问 CV 写法、section、照片惯例、导出 PDF 等**方法咨询** → 当前 skill 直接读取 `cv-standards.md` 回答。
+- 用户要成品但环境没有文件读写能力 → 只给 `cv-standards.md` 的方法路径，明确说明不能生成文件，不承诺 HTML 成品。
 
 **同一份 CV 不能投所有项目**——核心信息一致，但相关度排序和术语必须逐个项目调整。
 

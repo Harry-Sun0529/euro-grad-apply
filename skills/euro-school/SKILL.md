@@ -3,7 +3,7 @@ name: euro-school
 description: >
   欧洲留学选国选校。当用户输入 /euro-school，或问"去哪个国家好"、"帮我选校"、
   "德国还是荷兰"、"我这个背景能申什么学校"、"哪个国家性价比高"、"我想做 X 行业该去哪"、
-  "保底校怎么选"、"跨专业能申吗"时触发。
+  "保底校怎么选"、"跨专业能申吗"时触发。用于 school selection、which country should I choose、shortlist programs。
 ---
 
 ## 这个命令做什么

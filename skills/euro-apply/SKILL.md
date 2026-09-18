@@ -4,6 +4,7 @@ description: >
   欧洲留学申请系统操作与流程执行。当用户输入 /euro-apply，或问"Uni-assist 怎么填"、
   "Studielink 怎么注册"、"UA.se 怎么传材料"、"Campus France 流程"、"Universitaly 预注册"、
   "APS 怎么办"、"学信网认证"、"什么时候开始准备"、"deadline"、"奖学金怎么申"时触发。
+  how to apply、application portal、APS。
 ---
 
 ## 这个命令做什么

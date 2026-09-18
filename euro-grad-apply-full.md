@@ -11,14 +11,53 @@
 ---
 name: euro-grad-apply
 description: >
-  帮助中国学生（本科应届/硕士/GAP/工作几年）规划与执行欧洲大陆（非英国）硕士、
-  博士项目的申请。覆盖选国选校、文书、奖学金、欧盟联合培养项目、博士套磁、签证行前、
-  毕业目标导向择校（回国/留欧/兼顾/跳板）、跨专业、保底校、语言准备、永居入籍等。
-  当用户提到欧洲留学、读研/博、APS、CSC、DAAD、Erasmus Mundus、EIT、CSSD学信网、
-  Blue Card、QS排名、海归、选调、留欧、回国就业、跨专业、保底校、雅思托福备考、
-  永居入籍，或任何欧洲大陆留学相关问题时触发。用户把 KAUST、沙特/中东全奖研究型硕博、
-  VSRP 科研实习作为欧洲申请的对照、跳板或备选方案时，也可触发并读取 KAUST 专门参考文件。
+  欧洲大陆研究生申请的总览规划与跨阶段决策入口，面向中国学生处理整体路径、毕业目标、
+  跨专业、GAP/工作后申请、保底校、行业映射、奖学金总览、时间线、中文信息源与 KAUST 对照。
+  European graduate planning for Chinese students, country comparison, overall strategy。
+  当问题明确属于选校、文书/CV、博士、申请系统或 offer 后签证等单一场景时，若环境提供对应命令，
+  优先交给 /euro-school、/euro-docs、/euro-cv、/euro-phd、/euro-apply、/euro-visa；
+  本 skill 负责跨场景综合问题与无命令网页版的 references 兜底。
 ---
+
+## Scenario Router & Environment Fallback
+
+本 skill 是**总览 router + 无命令环境的知识库兜底入口**，不是 6 个场景 skill 的替代品。
+
+### 路由优先级
+
+1. 用户显式输入 slash command > 所有自然语言匹配。
+2. 精确场景子 skill > 本 skill 的总览兜底。
+3. 复合跨阶段问题（例如“从选校规划到签证”）由本 skill 先拆成总览，再在对应阶段转交子 skill。
+4. 如果本 skill 已被选中但发现问题其实是单一场景，允许中途转交并停止继续展开本 skill 的流程。
+
+### 插件环境路由
+
+如果当前环境提供这些命令，按以下规则转交；转交后读取对应 skill 的必问清单和停止点，不在这里复制另一套工作流：
+
+| 问题形态 | 路由 |
+|---|---|
+| 选国家、选学校、德国还是荷兰、背景能申什么 | `/euro-school` |
+| Motivation Letter、SoP、推荐信、RP，以及 CV 写法/照片/导出咨询 | `/euro-docs` |
+| **帮我做/生成/定制 CV** 成品文件 | `/euro-cv` |
+| 读博、博士岗位、套磁、联系导师、funding | `/euro-phd` |
+| Uni-assist、Studielink、APS、申请 deadline、奖学金申请节奏 | `/euro-apply` |
+| 拿到 offer 后的签证、资金、行前、落地和安顿 | `/euro-visa` |
+
+高风险平局裁决：
+
+- “帮我做/生成/定制 CV” → `/euro-cv`；“CV 怎么写/改、要不要照片、怎么导出” → `/euro-docs`。
+- “德国还是荷兰” → `/euro-school`；“Uni-assist 怎么填” → `/euro-apply`。
+- “读博/套磁” → `/euro-phd`；“拿到 offer 后怎么办” → `/euro-visa`。
+- “帮我做整体规划并比较 KAUST” → 本 skill。
+
+### 无命令环境降级
+
+网页版或其他没有上述命令的环境，继续由本 skill 直接读取 `references/` 的 Country Router 回答；只提供方法、知识和官网核验路径，不承诺 slash command 或文件成品。
+
+### 范围边界
+
+- **爱尔兰**只在横向比较中作为对照选项出现，不属于本项目主覆盖的欧洲大陆申请流程；爱尔兰具体申请与签证规则必须查官网，不凭记忆扩展。
+- **KAUST/中东**仅在对话同时出现欧洲语境与 KAUST/中东，或用户明确要求欧洲与 KAUST 对照时读取 `references/kaust.md`；纯 KAUST 问题不由本 skill 承担。
 
 ## Role & Interaction Principles
 
