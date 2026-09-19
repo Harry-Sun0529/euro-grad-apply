@@ -9,7 +9,7 @@
 ## 1. Erasmus Mundus Joint Masters (EMJMD)
 
 ### 项目特色
-- 欧盟旗舰联合硕士项目，目前有 **150+ 个 EMJMD** 在运行
+- 欧盟旗舰联合硕士项目，官方目录现列约 218 个，即 **200+ 个 EMJM** 在运行
 - 在 2-3 个欧洲国家的合作大学各学习一段时间，毕业获得 Joint Degree 或多校 Double/Multiple Degree
 - 学制通常 **2 年（120 ECTS）**
 - 涵盖学科广泛：工程、CS、商科、社科、人文、可持续发展、生物技术、AI、网络安全、临床语言学、人道主义、表演艺术等
@@ -20,19 +20,19 @@
   - 生活费约 **€1,400/月**（年度调整，以官方 catalogue 为准）
   - 参与费/学费全免
   - 旅费、签证费、安置费补贴
-- Partner Country 学生（含中国）通常名额更多、金额更高
+- 现行奖学金规则统一 **€1,400/月**，无 Programme/Partner Country 差额；同一国籍的奖学金获得者通常不超过总名额的 10%
 - 每个项目全奖名额有限（部分项目一个国家仅 1-2 个全奖）
 
 ### 申请
 - 直接到各 EMJMD 项目官网申请（无统一平台）
 - 项目目录：[Erasmus Mundus Catalogue](https://www.eacea.ec.europa.eu/scholarships/emjmd-catalogue_en)
-- 各项目截止日期不同，多在 **10月-次年2月**（一般 12月-1月最多）
+- 各项目截止日期不同，多在 **前一年 10 月至次年 1 月**（12 月-1 月最集中）
 - 部分项目有多轮录取
 
 ### 中国学生申请建议
 - 文书突出：跨文化适应力、国际视野、研究/职业目标
 - 推荐信至少一封外籍教授或国际项目导师
-- 一次只能申请 **3 个 EMJMD**（不能海投）
+- 现行无申请数量上限（唯一限制：已获得过 Erasmus+ 奖学金者不能再获奖学金），但仍建议精挑梯度申请而非海投
 - 与 CSC 不冲突，可以同时申请
 - 部分项目接受国内 211/双非背景，但顶级项目（如 EIT 联合的）仍偏好 985
 
@@ -40,9 +40,9 @@
 
 ## 2. EIT Knowledge & Innovation Communities (KIC) 硕士项目
 
-EIT（European Institute of Innovation and Technology）下设 9 个 KIC，每个 KIC 都有自己的 Master School，由多所欧洲顶尖大学联合培养，**强调创新创业 + 行业对接**。
+EIT（European Institute of Innovation and Technology）下设 10 个 KIC，每个 KIC 都有自己的 Master School，由多所欧洲顶尖大学联合培养，**强调创新创业 + 行业对接**。
 
-### 9 个 KIC 概览
+### 10 个 KIC 概览
 
 | KIC | 方向 | 主要参与校 |
 |---|---|---|
@@ -55,6 +55,7 @@ EIT（European Institute of Innovation and Technology）下设 9 个 KIC，每�
 | **EIT Raw Materials** | 原材料/采矿/可持续资源 | TU Bergakademie Freiberg、AGH、Aalto、Polimi、Lorraine 等 |
 | **EIT Urban Mobility** | 城市出行/交通系统 | UPC、TUM、Tallinn、Tampere、UPM 等 |
 | **EIT Culture & Creativity** | 文化创意产业（较新） | 各类艺术/人文院校 |
+| **EIT Water** | 水资源韧性/水安全（新增） | 院校名单以 KIC 官网为准 |
 
 ### 核心模式
 - **2 年学习，分别在 2 个不同国家的合作校**
@@ -64,17 +65,16 @@ EIT（European Institute of Innovation and Technology）下设 9 个 KIC，每�
 - 毕业获 **双硕士学位 + EIT 证书**
 
 ### 学费与奖学金
-- 标准学费（EIT Digital 为例）：非 EU 约 **€19,000/年**，EU 约 **€9,000/年**
-- **全免学费奖学金**（Full Fee Waiver）：每个项目 ~3 个名额给最优申请者
-- **部分免学费**（Partial Fee Waiver）：参与费降至 **€15,000/年**，约 **30%** 录取者获得
-- InnoEnergy 2026 申请：**2025年9月15日开放**
-- EIT Digital 申请：通常 **1月、4月** 两轮截止
+- 标准学费（EIT Digital 为例）：非 EU **€18,000/年（€9,000/学期）**，EU **€6,000/年（€3,000/学期）**，申请费 €75
+- **Merit 奖学金**（全额或半额学费减免，按申请排名授予）；部分项目（AUSIR、CNIHPC、CSES 等）另有全免学费 + 生活费资助
+- InnoEnergy 2026 申请：**2025年9月15日开放**；各届具体日期以 mastersplus.innoenergy.com 为准
+- EIT Digital 申请：每届约 **2-6 月分多轮**录取，下届秋季开放，以 masterschool.eitdigital.eu 为准
 
 ### 中国学生申请建议
-- EIT 项目对 **本科 GPA 要求较高**（85+），并要求 GRE 或同等
+- 官方最低要求为 **180 ECTS 学士学位 + 英语（IELTS 6.5 等）**，无 GPA/GRE 硬性门槛（但热门项目实际录取背景仍强）
 - 强调 **创新创业** 经历（比赛、初创公司、项目）——纯学术背景不如学术+实践组合受欢迎
 - 申请文书必须谈到 **technical depth + entrepreneurial mindset** 的结合
-- 毕业生进入欧洲创业生态系统的机会很多，约 1/3 毕业生 2 年内自创公司
+- 毕业生进入欧洲创业生态系统的机会较多（创业比例等数据以 EIT 官方披露为准）
 
 ### 信息源
 - EIT 总览：[eit.europa.eu](https://eit.europa.eu/)
@@ -109,7 +109,7 @@ EIT（European Institute of Innovation and Technology）下设 9 个 KIC，每�
 
 ## 4. EuroTech Universities Alliance 联合硕士
 
-6 所欧洲顶级理工大学（TUM、DTU、EPFL、TU/e、École Polytechnique、Technion）的战略联盟，提供双硕士项目。
+6 所欧洲顶级理工大学（TUM、DTU、EPFL、TU/e、Institut Polytechnique de Paris、Technion——其中 Technion 为以色列高校）的战略联盟，提供双硕士项目。
 
 ### 项目特色
 - 1:1 MSc 模式：1 年在 A 校 + 1 年在 B 校
@@ -117,12 +117,9 @@ EIT（European Institute of Innovation and Technology）下设 9 个 KIC，每�
 - 论文由两校教授联合指导
 - 学费按所在国/校规则
 
-### 现有合作（部分）
-- TUM + DTU：能源工程、可持续能源
-- TUM + EPFL：CS、机械工程
-- DTU + TU/e：生物医学工程
-- École Polytechnique + TUM：数学、物理
-- 其他根据双边协议而异
+### 现有合作
+- 合作方向涵盖能源、CS、机械、生物医学工程、数学/物理等领域
+- 具体校际配对与项目组合**以各校双边协议为准**，逐年可能调整，申请前以 eurotech-universities.eu 及各校官网核实
 
 ### 申请
 - 通过其中一所大学直接申请，注明双学位意向
@@ -132,7 +129,7 @@ EIT（European Institute of Innovation and Technology）下设 9 个 KIC，每�
 
 ## 5. CEMS Master in International Management (MIM)
 
-商科领域最负盛名的联合硕士项目之一，33 所顶尖商学院联合培养（每国一所）。
+商科领域最负盛名的联合硕士项目之一，全球 30 余所顶尖商学院联合培养。
 
 ### 项目特色
 - **学制 1 年（在已有 MSc 项目基础上 + 1 学期 CEMS 课程）**
@@ -141,18 +138,18 @@ EIT（European Institute of Innovation and Technology）下设 9 个 KIC，每�
 - 毕业获 **CEMS MIM 学位 + 母校 MSc 学位**
 
 ### 中国相关 CEMS 成员校
-- 清华经管学院（中国唯一 CEMS 成员）
+- 清华经管学院（中国大陆唯一 CEMS 成员；香港另有 HKUST）
 - 欧洲：HEC Paris、ESSEC、ESCP、Bocconi、ESADE、LSE、St. Gallen、RSM、Stockholm School of Economics、Vienna University of Economics、WU、Norwegian School of Economics、Aalto、CBS、Cologne、Louvain (Belgium) 等
 
 ### 申请
 - 通过欧洲合作校的 MSc 申请 + CEMS 申请
 - 文书重点：跨国领导力、global mindset、商业领导力
-- ESADE 等校 2026 申请截止可能延至 **6月**
+- 各校截止日期差异较大、部分校滚动录取，以各校官网当年公布为准
 - 信息源：[cems.org](https://www.cems.org/)
 
 ### 中国学生申请建议
 - 适合本科商科/经济背景 + 有跨国实习经验者
-- 学费高（€20,000-40,000/年）+ 2 国生活成本，建议同时申请部分奖学金
+- 学费高（€20,000-40,000/年 为非官方估计，各校差异大，以各校官网为准）+ 2 国生活成本，建议同时申请部分奖学金
 - 回国就业认可度高（清华参与）+ 留欧/全球就业网络丰富
 
 ---
@@ -163,13 +160,13 @@ Marie Skłodowska-Curie Actions 的核心项目之一，欧盟资助的博士联
 
 ### 项目特色
 - 由 **欧洲多所大学/研究机构 + 企业 + 智库** 组成的网络联合培养博士
-- 博士生需在至少 **2 个国家** 进行 secondment（短期访问/合作研究）
-- **Industrial Doctorates**（必含企业合作）和 **Joint Doctorates**（双学位）两种形式
+- 博士生 secondment（短期访问/合作研究）为**鼓励项**，时长上限为研究训练月数的一半
+- 三种形式：标准 DN、**Industrial Doctorates**（必含企业合作，要求 ≥50% 时间在非学术部门）、**Joint Doctorates**（双学位）
 - 学制 3-4 年
 
 ### 资助
 - 雇佣制：博士生是项目成员，签劳动合同
-- 薪资遵循欧盟标准（含 living allowance + mobility/family allowance，合计税前约 €4,000-5,000/月，年度微调；以 MSCA 当年公示为准）
+- 薪资遵循欧盟标准：living allowance €4,250/月 + mobility allowance €710/月（毛额、适用国家矫正系数），另有 family allowance €660/月——**以当年 Work Programme 为准**
 - 待遇水平在欧洲博士中属于上游
 
 ### 申请
@@ -193,11 +190,12 @@ Marie Skłodowska-Curie Actions 的核心项目之一，欧盟资助的博士联
 ### 项目特色
 - 由地区/国家研究机构主导，欧盟提供配套资助
 - 每个 COFUND 项目通常有自己的招聘流程和方向
-- 2026 年 COFUND 申请：**2025年12月16日-2026年4月8日**（机构申请欧盟资助）
+- 2026 年 COFUND 机构申请：**2025年12月16日-2026年4月8日**（已截止；为机构申请欧盟资助的期限，个人岗位招聘另行发布）
 
 ### 资助
-- 与 Doctoral Networks 类似，雇佣制，薪资达欧盟标准
+- 与 Doctoral Networks 类似，雇佣制，薪资达欧盟标准（博士月毛收入下限约 **€3,500**、博士后约 **€4,980**）
 - 部分包含国际合作 secondment
+- 2027 年 COFUND call（**2026-12-08 开放**）将只资助博士项目（以正式 Work Programme 为准）
 
 ### 申请
 - 通过 EURAXESS 搜索 COFUND 项目招聘公告
@@ -232,7 +230,7 @@ Marie Skłodowska-Curie Actions 的核心项目之一，欧盟资助的博士联
 - **多语言/多文化适应力**：是欧洲雇主和跨国企业看重的素质
 
 ### 劣势/挑战
-- **申请竞争激烈**：尤其全奖项目（EMJMD 全奖录取率常 < 5%）
+- **申请竞争激烈**：尤其全奖项目（EMJMD 全奖竞争非常激烈，具体录取率以各项目官方数据为准）
 - **每次搬家成本**：1-2 次跨国搬家，住房、签证、银行账户都要重新办
 - **签证复杂度**：部分国家间需要重新申请签证
 - **课程衔接**：不同学校课程节奏不一致，需自己调整

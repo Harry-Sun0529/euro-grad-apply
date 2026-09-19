@@ -75,7 +75,7 @@ KAUST 是位于沙特 Thuwal 的研究型大学，授课和科研语言为英语
 - 官网给出的最低 GPA 为 3.0/4.0；被录取者通常学业表现较强。不要把最低线当作录取线。
 
 英语与 GRE：
-- 官网接受 IELTS、TOEFL iBT、PTE Academic、Cambridge CAE、Linguaskill 等，具体分数线以 Entry Requirements 页面为准。
+- 官网接受 IELTS、TOEFL iBT、PTE Academic、Cambridge C1/C2 等（2026-09 复核时 Linguaskill 已不在官方清单；Duolingo 仅 VSRP 申请人可用），具体分数线以 Entry Requirements 页面为准。
 - KAUST 不接受 Medium of Instruction Certificate 作为英语能力证明。
 - General GRE 不是强制要求，但可在能增强申请时提交。
 
@@ -97,11 +97,11 @@ Faculty contact：
 
 ## 时间线
 
-官网 Admission Timeline 页面在 2026-06-18 查询时显示：
+官网 Admission Timeline 页面在 2026-09-19 查询时显示：
 
-- 2026 入学申请已关闭。
-- 2027 入学申请预计在 8 月中旬开放。
-- 2026 Fall 曾面向 MS、MS/PhD、PhD；2026 Spring 仅面向 MS/PhD 和 PhD。
+- Spring 2027 申请已开放（仅 PhD；Round 1 截止 2026-09-27，开学 2027-01-17）。
+- Fall 2027 于 2026-09-28 开放（MS/MS-PhD/PhD；Round 2 截止 2027-01-03，开学 2027-08-29）。
+- 2026 Fall 曾面向 MS、MS/PhD、PhD；Spring 通道近年仅面向 PhD（与 2026 Spring 面向 MS/PhD 和 PhD 的模式不同）。
 
 回答 deadline 时必须实时查官网，不要复用旧日期。KAUST 时间线可能按申请量调整。
 

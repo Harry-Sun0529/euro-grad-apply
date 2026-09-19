@@ -23,18 +23,18 @@
 ### 申请系统
 - **Studielink**：荷兰高等教育注册系统，部分学校要求通过 Studielink 注册后再到学校 portal 提交材料
 - **学校自有 portal**：大多数硕士项目直接通过各校的在线申请系统提交
-- 每个项目通常可独立申请，没有志愿数限制
+- numerus fixus 项目每年最多申请 2 个（统一 1 月 15 日截止）；非 NF 项目通常无统一数量限制——以 Studielink/各校为准
 
 ### Nuffic 认证（重要更新）
 - Nuffic（荷兰高等教育国际合作组织）负责评估外国学历在荷兰的等同性
-- Nuffic 不再逐一认证个人学历，但维护国别报告（Country Module），荷兰大学据此评估中国学历
+- Nuffic 至今仍通过 IDW 门户提供个人学历评估（收费、约 10 个工作周以上）；教育体系描述见其 education systems 页——高校也可自行认定
 - 中国正规本科学位（四年制）通常被认可为等同于荷兰 Bachelor
-- **2024 年起政策变化**：Nuffic Certificate **不再是 MVV 签证的强制要求**（IND 已取消）
+- **政策变化**：现行 IND 学生居留要求中无 Nuffic certificate
 - 但部分学校在申请时仍可能要求 CSSD（学信网）学位认证报告作为学历核验
 - 详见 references/china-specific-procedures.md
 
 ### 申请时间线
-- 大多数项目 **10月开放 → 次年3月1日或4月1日截止**
+- 大多数项目 **10月开放 → 次年3月1日或4月1日截止**；实际截止区间为 10 月至次年 5 月（TU Delft 非欧盟热门 MSc 多为 1 月 15 日、其余 4 月 1 日；RSM 部分项目 10 月 31 日、滚动至 5 月 15 日）——以各校为准
 - 部分热门项目有更早截止（如 1月15日、2月1日）
 - 少量项目采用 Rolling Admission（先到先得）
 - TU Delft 等校的热门项目建议尽早申请
@@ -53,11 +53,11 @@
 ## 3. 学费与奖学金
 
 ### 学费（非 EU/EEA 学生）
-- 范围：€8,000-22,000+/年（因校和项目差异大）
-- 理工类通常 €14,000-22,000/年（如 TU Delft 硕士约 €17,310-22,290/年）
+- 范围：约 €10,000-26,000+/年（因校和项目差异大）
+- TU Delft 2026/27 非 EU 硕士 institutional fee €25,633（法定学费 €2,694）——逐年上调，以各校官网为准
 - 商科可能更高（RSM、AMS 等商学院 €15,000-25,000+）
 
-> 以上学费为大致范围，以各校各项目官网公布为准。
+> 以上学费为大致范围，逐年上调且因项目差异大，以各校各项目官网公布为准。
 
 ### 奖学金
 
@@ -71,13 +71,15 @@
 - 由 Nuffic 中国办公室协调，各校设置不同金额和名额
 - 部分为全额，部分为部分减免
 - 需通过 Nuffic 中国 / nesochina.org 查看具体信息
+- **渠道待核实（2026-09 复核：nesochina.org 已重定向至 studyinnl.org，Nuffic 官网已无 OTS 页面——OTS-China 现状未能核实，以 Nuffic/studyinnl 为准）**
 
 **各校自有奖学金**
-- Justus & Louise van Effen Excellence Scholarship（TU Delft）：全额学费减免 + €30,000/年生活费，**12月1日截止**
+- Justus & Louise van Effen Excellence Scholarship（TU Delft）：第一年全额学费减免 + 生活费补助（金额以 TU Delft 官网为准）；第二年续期条件为第一年均分 8/10 且完成 48/60 ECTS；**12月1日截止**
 - Utrecht Excellence Scholarship：学费减免或全额
 - Amsterdam Merit Scholarship / Amsterdam Excellence Scholarship
 - Leiden University Excellence Scholarship（LExS）
 - Groningen Talent Grant
+- 上述校奖名称与截止以各校官网为准，未能逐项核实
 - 申请时通常在录取后自动考虑或需额外申请
 
 **CSC-荷兰高校合作项目**
@@ -90,8 +92,9 @@
 
 ### 雇佣制
 - 荷兰博士生是大学正式雇员（promovendus），签劳动合同
-- 全薪，按 CAO NU 标准逐年递增（2024 年约 €2,770-3,539/月税前，四年内递增）
-- 享有社保、带薪假期（通常 29 天/年）、养老金
+- 全薪，现行 scale P 约 €3,204-4,051/月税前（2026 薪级表，另有 8% 假期津贴 + 8.3% 年终奖；四年内递增）
+- 享有社保、带薪假期（30 或 41 天/年）、养老金
+- 集体协议现为 CAO Universiteiten——以 academictransfer/各校为准
 - 博士学位由大学授予（promotie）
 
 ### 找博士职位
@@ -114,9 +117,11 @@
 - 荷兰学校作为 sponsor 代办签证（MVV 入境签证 + VVR 居留许可）
 - 你拿到录取后，学校会启动签证流程
 - 学生本人不需要亲自去使馆（学校在荷兰 IND 代办），但需要在中国取 MVV sticker
+- 申请费 €254；批准后 3 个月内领取 MVV（护照须有效 6 个月以上，MVV 有效 90 天）
 
 ### 生活费
 - 约 €900-1,300/月（因城市差异）
+- IND 学生居留资金标准：2026 年大学/hbo 学生须证明 €1,130.77/月（全年 €13,569.24），每年 1 月调整，以 ind.nl 为准
 - 阿姆斯特丹最贵，小城市如 Enschede、Wageningen 较便宜
 - 包含住房、食物、交通、保险等
 
@@ -132,9 +137,10 @@
 - 或以自雇形式工作（需另行申请）
 
 ### 毕业后
-- **Zoekjaar（Search Year）**：硕士或博士毕业后可申请 1 年求职居留许可
+- **Zoekjaar（Search Year）**：硕士或博士毕业后（或取得博士学位后）3 年内可申请 1 年求职居留许可；期间可自由工作（含自雇，无需 TWV）
 - 在此期间找到与学历匹配的工作后可转为工作签证（Highly Skilled Migrant）
-- 荷兰的 30% tax ruling 对高技能移民有税收优惠
+- IND 2026 HSM 薪资门槛：orientation year 期间适用减额 €3,122/月；<30 岁 €4,357、≥30 岁 €5,942——以 ind.nl 为准
+- 荷兰的 30% tax ruling 对高技能移民有税收优惠；由 Belastingdienst 管理（2026 门槛 €48,013/€36,497），政策处于变动中，以 Belastingdienst 为准
 
 ---
 
