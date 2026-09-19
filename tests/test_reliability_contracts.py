@@ -52,8 +52,8 @@ class ReliabilityContractTests(unittest.TestCase):
         payloads = [json.loads(path.read_text(encoding="utf-8")) for path in paths]
         plugin_versions = {payload["version"] for payload in payloads[:3]}
         marketplace_version = payloads[3]["plugins"][0]["version"]
-        self.assertEqual(plugin_versions, {"1.1.1"})
-        self.assertEqual(marketplace_version, "1.1.1")
+        self.assertEqual(plugin_versions, {"1.2.0"})
+        self.assertEqual(marketplace_version, "1.2.0")
 
 
 if __name__ == "__main__":
