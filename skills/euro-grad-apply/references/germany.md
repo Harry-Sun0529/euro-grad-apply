@@ -21,9 +21,12 @@
 - 莱比锡大学、美因茨大学、明斯特大学、图宾根大学、维尔茨堡大学、法兰克福大学
 
 **精英大学（Exzellenzuniversitäten）**：
-当前入选名单包括 RWTH Aachen、TU Berlin、TU Dresden、FU Berlin、HU Berlin、
-Uni Bonn、Uni Hamburg、Uni Heidelberg、KIT、Uni Konstanz、LMU München、TU München。
-精英大学标签代表研究实力获联邦政府认可，享有额外科研资助。新一轮卓越大学评审结果 2026 年 10 月公布、2027 年起资助，以 DFG 官网最新名单为准。
+2027 年 1 月起共 15 个资助对象（Wissenschaftsrat 2026-10-02 公告，2026-11 官方核验）：
+- 续期 10 个（2026-03 决定）：RWTH Aachen、柏林大学联盟（FU Berlin + HU Berlin + TU Berlin）、Uni Bonn、TU Dresden、Uni Hamburg、Uni Heidelberg、KIT、LMU München、TU München、Uni Tübingen
+- 新增 5 个（2026-10-02 决定）：Uni Freiburg、Uni Jena、Uni Köln、莱茵-美因大学联盟（TU Darmstadt + Goethe-Universität Frankfurt + JGU Mainz）、Ruhr Innovation Lab（Ruhr-Universität Bochum + TU Dortmund）
+- Uni Konstanz 因卓越集群数量不足未获续期，2027 年起不在名单内——旧攻略仍会把它列为精英大学
+
+精英大学标签代表研究实力获联邦政府认可，享有额外科研资助。名单以 Wissenschaftsrat / DFG 官网为准。
 
 ### 学位结构
 - Bachelor（6-8学期）→ Master（2-4学期）→ Promotion（博士，无固定学期制）

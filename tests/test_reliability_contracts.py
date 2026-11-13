@@ -14,6 +14,12 @@ class ReliabilityContractTests(unittest.TestCase):
         self.assertIn("steps.lychee.outputs.exit_code", workflow)
         self.assertNotIn("env.lychee_exit_code", workflow)
         self.assertIn("fail: false", workflow)
+        # lychee 0.24 移除了 --exclude-mail；带着它工具直接报错退出，什么都不查。
+        self.assertNotIn("--exclude-mail", workflow)
+        self.assertIn("test -s ./lychee-report.md", workflow)
+        # --exclude-path 是正则，带 ./ 前缀时匹配不到，合并文件会被重复检查。
+        self.assertIn("--exclude-path euro-grad-apply-full.md", workflow)
+        self.assertNotIn("--exclude-path ./", workflow)
 
     def test_cv_injector_is_distributed_with_template(self):
         injector = REPO / "skills/euro-cv/assets/cv_inject.py"
@@ -52,8 +58,10 @@ class ReliabilityContractTests(unittest.TestCase):
         payloads = [json.loads(path.read_text(encoding="utf-8")) for path in paths]
         plugin_versions = {payload["version"] for payload in payloads[:3]}
         marketplace_version = payloads[3]["plugins"][0]["version"]
-        self.assertEqual(plugin_versions, {"1.2.0"})
-        self.assertEqual(marketplace_version, "1.2.0")
+        self.assertEqual(len(plugin_versions), 1)
+        version = plugin_versions.pop()
+        self.assertRegex(version, r"^\d+\.\d+\.\d+$")
+        self.assertEqual(marketplace_version, version)
 
 
 if __name__ == "__main__":

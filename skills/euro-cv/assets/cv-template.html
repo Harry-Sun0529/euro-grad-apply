@@ -249,7 +249,6 @@ function saveDraft(){
 function resetOriginal(){
   if(!confirm('丢弃所有修改，回到 AI 生成时的版本？')) return;
   CV.innerHTML=ORIGINAL_HTML;
-  bindEditing();
   sDel(KEY);
   document.getElementById('restore-bar').classList.remove('show');
   msg('已还原');
@@ -267,7 +266,9 @@ function fontStep(d){
 
 /* 粘贴强制转纯文本：
    从 Word/网页粘贴会带 <span style="font-family:宋体;color:red">，
-   污染排版且用户无法自己清理，也会让 DOM→JSON 导出产出垃圾。 */
+   污染排版且用户无法自己清理，也会让 DOM→JSON 导出产出垃圾。
+   监听挂在 #cv 容器上，容器本身从不被替换——只在启动时绑定一次。
+   重复绑定会让一次粘贴插入多遍。 */
 function bindEditing(){
   CV.addEventListener('paste', function(e){
     e.preventDefault();
@@ -312,10 +313,32 @@ document.getElementById('photo-input').addEventListener('change', function(ev){
 });
 
 /* ============ 保存 / 打印 ============ */
+/* 存出的文件必须自带「当前编辑状态」：
+   重新打开时启动流程会用 cv-data 里的原始数据重画页面，
+   不带上这份状态，用户的修改和照片在换浏览器 / 换电脑后就没了。
+   状态放在独立的 cv-saved 数据块里，cv-data 保持原样，「还原」仍能回到 AI 生成的版本。 */
+function safeJSON(o){
+  var bs=String.fromCharCode(92);
+  return JSON.stringify(o).replace(/[<>&\u2028\u2029]/g,function(c){
+    return bs+'u'+('0000'+c.charCodeAt(0).toString(16)).slice(-4);
+  });
+}
+function buildSavedHTML(){
+  var root=document.documentElement.cloneNode(true);
+  var old=root.querySelector('#cv-saved'); if(old) old.parentNode.removeChild(old);
+  var cv=root.querySelector('#cv'); if(cv) cv.innerHTML='';
+  [].forEach.call(root.querySelectorAll('.notice'),function(n){ n.classList.remove('show'); });
+  var st=document.createElement('script');
+  st.type='application/json'; st.id='cv-saved';
+  st.textContent=safeJSON({html:CV.innerHTML, at:Date.now(),
+    photo:document.body.getAttribute('data-photo')});
+  var data=root.querySelector('#cv-data');
+  data.parentNode.insertBefore(st, data.nextSibling);
+  return '<!DOCTYPE html>\n'+root.outerHTML;
+}
 function saveHTML(){
   var name=(document.title||'CV')+'.html';
-  var blob=new Blob(['<!DOCTYPE html>\n'+document.documentElement.outerHTML],
-                    {type:'text/html;charset=utf-8'});
+  var blob=new Blob([buildSavedHTML()],{type:'text/html;charset=utf-8'});
   if(window.showSaveFilePicker){
     window.showSaveFilePicker({suggestedName:name,
       types:[{description:'HTML',accept:{'text/html':['.html']}}]})
@@ -357,9 +380,28 @@ function doPrint(){
   if(meta.photo==='on') document.body.setAttribute('data-photo','on');
   KEY='cv-draft:'+(meta.cv_id||meta.doc_title||'default');
 
-  paint(DATA);
+  try{
+    paint(DATA);
+  }catch(e){
+    CV.innerHTML='';
+    showNotice('err-bar','<b>数据结构有误，无法渲染</b>：'+esc(e.message)
+      +'<br>请把这条错误信息发回给 AI，让它重新生成一次。');
+    msg('数据有误',true); return;
+  }
   ORIGINAL_HTML=CV.innerHTML;
   bindEditing();
+
+  // 这是用「💾 保存」存出来的文件：恢复保存时的内容和照片
+  var savedEl=document.getElementById('cv-saved');
+  if(savedEl){
+    try{
+      var sv=JSON.parse(savedEl.textContent);
+      if(sv&&typeof sv.html==='string'){
+        CV.innerHTML=sv.html;
+        if(sv.photo) document.body.setAttribute('data-photo',sv.photo);
+      }
+    }catch(e){ /* 保存状态损坏时退回原始版本 */ }
+  }
 
   // 不静默恢复草稿——让用户自己选，否则改坏了无从察觉
   var saved=sGet(KEY);
@@ -384,7 +426,6 @@ function applyDraft(){
     var d=JSON.parse(sGet(KEY));
     CV.innerHTML=d.html;
     if(d.photo) document.body.setAttribute('data-photo',d.photo);
-    bindEditing();
     msg('已恢复上次编辑');
   }catch(e){ msg('恢复失败',true); }
   document.getElementById('restore-bar').classList.remove('show');

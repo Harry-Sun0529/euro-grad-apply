@@ -98,8 +98,60 @@ class CvInjectTests(unittest.TestCase):
         with self.assertRaises(cv_inject.InjectionError):
             cv_inject.inject_template("<html></html>", data)
 
+    def _valid_data(self):
+        return {
+            "meta": {"cv_id": "synthetic", "photo": "off"},
+            "name": "Synthetic Person",
+            "contact": ["a@example.com"],
+            "sections": [
+                {"title": "Education", "entries": [
+                    {"title": "Uni", "meta": "2021–2025", "sub": "B.Eng.", "bullets": ["one"]}
+                ]},
+                {"title": "Skills", "entries": [{"title": "", "bullets": ["Python"]}]},
+            ],
+        }
+
+    def test_validate_accepts_documented_schema(self):
+        cv_inject.validate_cv_data(self._valid_data())
+
+    def test_validate_rejects_misspelled_keys_and_wrong_types(self):
+        cases = {
+            "entries 写成 items": lambda d: d["sections"][0].update(
+                items=d["sections"][0].pop("entries")),
+            "entry 用了 date": lambda d: d["sections"][0]["entries"][0].update(date="2021"),
+            "contact 是字符串": lambda d: d.update(contact="a@example.com"),
+            "bullets 是字符串": lambda d: d["sections"][0]["entries"][0].update(bullets="one"),
+            "缺 cv_id": lambda d: d["meta"].pop("cv_id"),
+            "缺 name": lambda d: d.pop("name"),
+            "sections 为空": lambda d: d.update(sections=[]),
+            "photo 非法": lambda d: d["meta"].update(photo="yes"),
+        }
+        for label, mutate in cases.items():
+            data = self._valid_data()
+            mutate(data)
+            with self.subTest(label), self.assertRaises(cv_inject.InjectionError):
+                cv_inject.validate_cv_data(data)
+
+    def test_file_injection_rejects_invalid_schema_without_writing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            directory_path = Path(directory)
+            data_path = directory_path / "data.json"
+            output_path = directory_path / "cv.html"
+            bad = self._valid_data()
+            bad["sections"][0]["items"] = bad["sections"][0].pop("entries")
+            data_path.write_text(json.dumps(bad), encoding="utf-8")
+            with self.assertRaises(cv_inject.InjectionError):
+                cv_inject.inject_files(TEMPLATE_PATH, data_path, output_path)
+            self.assertFalse(output_path.exists())
+
+    def test_template_binds_editing_once_and_saves_edit_state(self):
+        # 重复绑定会让粘贴插入多遍；保存不带编辑状态会在重新打开时丢修改。
+        self.assertEqual(self.template.count("bindEditing();"), 1)
+        self.assertIn("cv-saved", self.template)
+        self.assertIn("buildSavedHTML()", self.template)
+
     def test_file_injection_refuses_overwrite_and_cleans_up_on_failure(self):
-        data = {"meta": {"cv_id": "synthetic"}}
+        data = self._valid_data()
         with tempfile.TemporaryDirectory() as directory:
             directory_path = Path(directory)
             template_path = directory_path / "template.html"

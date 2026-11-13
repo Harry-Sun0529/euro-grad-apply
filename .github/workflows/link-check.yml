@@ -25,17 +25,22 @@ jobs:
           # --timeout 单链接 20 秒超时
           # --accept 接受常见非 200 状态（如有些站对 bot 返 403）
           # --exclude-path 跳过合并单文件：它的链接与源文件完全重复，
-          #   否则每月把所有外链查两遍，也是被官网限流的主因
+          #   否则每月把所有外链查两遍，也是被官网限流的主因。
+          #   这个参数的值是正则、按不带 ./ 的路径匹配——写成 ./xxx 不会生效
           args: >-
             --no-progress
             --max-concurrency 4
             --timeout 20
             --accept 200,206,301,302,403,429
-            --exclude-mail
-            --exclude-path ./euro-grad-apply-full.md
+            --exclude-path euro-grad-apply-full.md
             './**/*.md'
           fail: false
           output: ./lychee-report.md
+
+      # lychee 自身出错（如参数被新版本移除）时不会写出报告。
+      # 这里让任务直接失败，而不是照常开一个空 issue——那样看起来像"查过了"。
+      - name: Fail if lychee produced no report
+        run: test -s ./lychee-report.md
 
       - name: Create issue if links failed
         if: ${{ steps.lychee.outputs.exit_code != '0' }}

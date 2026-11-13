@@ -67,7 +67,7 @@ EIT（European Institute of Innovation and Technology）下设 10 个 KIC，每�
 ### 学费与奖学金
 - 标准学费（EIT Digital 为例）：非 EU **€18,000/年（€9,000/学期）**，EU **€6,000/年（€3,000/学期）**，申请费 €75
 - **Merit 奖学金**（全额或半额学费减免，按申请排名授予）；部分项目（AUSIR、CNIHPC、CSES 等）另有全免学费 + 生活费资助
-- InnoEnergy 2026 申请：**2025年9月15日开放**；各届具体日期以 mastersplus.innoenergy.com 为准
+- InnoEnergy Intake 2027 分 5 轮（2026-11 官方核验，官方注明日期可能调整）：第 1 轮 2026-09-21 至 11-01（已截止）、第 2 轮 2026-11-05 至 2027-01-17、第 3 轮 2027-01-25 至 03-07、第 4 轮 03-15 至 04-18、第 5 轮 04-23 至 05-30；Intake 2027 免申请费。以 mastersplus.innoenergy.com 为准
 - EIT Digital 申请：每届约 **2-6 月分多轮**录取，下届秋季开放，以 masterschool.eitdigital.eu 为准
 
 ### 中国学生申请建议

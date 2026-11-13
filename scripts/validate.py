@@ -155,15 +155,6 @@ if REFS_DIR.is_dir():
     else:
         notes.append(f"{len(on_disk)} 个 reference 均被至少一个 SKILL.md 引用，无孤儿")
 
-# ---------- 6. 反向孤儿检查 ----------
-if REFS_DIR.is_dir():
-    on_disk = {p.name for p in REFS_DIR.glob("*.md")}
-    orphans = sorted(on_disk - referenced)
-    if orphans:
-        fail(f"孤儿 reference（没有任何 SKILL.md 提到，AI 永远读不到）: {orphans}")
-    else:
-        notes.append(f"{len(on_disk)} 个 reference 均被至少一个 SKILL.md 引用，无孤儿")
-
 # ---------- 6b. 主 router 覆盖检查 ----------
 main_text = skill_texts.get(MAIN_SKILL / "SKILL.md", "")
 scene_commands = (
@@ -191,6 +182,26 @@ else:
 
 if not re.search(r"(?i)无命令|网页版.*reference|不具备文件读写", main_text):
     fail("主 skill 缺少无命令环境的网页版降级声明")
+
+# ---------- 6e. 申请档案与按需读取约定 ----------
+# 档案是跨命令共享的：任何一个 skill 漏了这段，用户在那个命令里就会被重新问一遍。
+PROFILE_TEMPLATE = MAIN_SKILL / "assets" / "profile-template.md"
+if not PROFILE_TEMPLATE.exists():
+    fail(f"申请档案模板缺失: {PROFILE_TEMPLATE.relative_to(REPO)}")
+no_profile = sorted(
+    str(sf.relative_to(REPO)) for sf, text in skill_texts.items()
+    if "euro-profile.md" not in text or "profile-template.md" not in text
+)
+if no_profile:
+    fail(f"以下 skill 缺少申请档案约定（euro-profile.md + 模板路径）: {no_profile}")
+no_on_demand = sorted(
+    str(sf.relative_to(REPO)) for sf, text in skill_texts.items()
+    if sf.parent.name != MAIN_SKILL.name and "按需读" not in text
+)
+if no_on_demand:
+    fail(f"以下场景 skill 的资料清单缺少\"按需读\"说明: {no_on_demand}")
+if PROFILE_TEMPLATE.exists() and not no_profile and not no_on_demand:
+    notes.append(f"{len(skill_texts)} 个 skill 均含申请档案约定，场景 skill 均声明按需读取")
 
 # ---------- 6c. 显式章节锚点检查 ----------
 anchor_pattern = re.compile(

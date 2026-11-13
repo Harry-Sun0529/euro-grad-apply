@@ -26,6 +26,88 @@ class InjectionError(ValueError):
     """Raised when a template or payload cannot be safely injected."""
 
 
+TOP_KEYS = {"meta", "name", "contact", "sections"}
+SECTION_KEYS = {"title", "entries"}
+ENTRY_KEYS = {"title", "meta", "sub", "bullets"}
+
+
+def validate_cv_data(data: Any) -> None:
+    """Reject payloads the template would render blank or incomplete.
+
+    The template only reads the keys below. A misspelled key (``items`` for
+    ``entries``) or a wrong type (a string where a list is expected) is valid
+    JSON, so without this check the output opens as an empty or partial page
+    with no error. Failing here lets the caller fix the data before delivery.
+    """
+    problems: list[str] = []
+
+    def check_keys(obj: dict, allowed: set[str], where: str) -> None:
+        unknown = sorted(k for k in obj if k not in allowed and not k.startswith("_"))
+        if unknown:
+            problems.append(f"{where} 含模板不认识的键 {unknown}，允许的键：{sorted(allowed)}")
+
+    def check_str(value: Any, where: str, *, required: bool = False) -> None:
+        if value is None and not required:
+            return
+        if not isinstance(value, str):
+            problems.append(f"{where} 必须是字符串")
+        elif required and not value.strip():
+            problems.append(f"{where} 不能为空")
+
+    def check_str_list(value: Any, where: str) -> None:
+        if not isinstance(value, list) or not all(isinstance(v, str) for v in value):
+            problems.append(f"{where} 必须是字符串数组（多行内容拆成多个元素）")
+
+    if not isinstance(data, dict):
+        raise InjectionError("CV 数据顶层必须是 JSON 对象")
+    check_keys(data, TOP_KEYS, "顶层")
+
+    meta = data.get("meta")
+    if not isinstance(meta, dict):
+        problems.append("meta 必须是对象")
+    else:
+        check_str(meta.get("cv_id"), "meta.cv_id", required=True)
+        check_str(meta.get("doc_title"), "meta.doc_title")
+        check_str(meta.get("target"), "meta.target")
+        if meta.get("photo") not in (None, "on", "off"):
+            problems.append('meta.photo 只能是 "on" 或 "off"')
+
+    check_str(data.get("name"), "name", required=True)
+    if "contact" in data:
+        check_str_list(data["contact"], "contact")
+
+    sections = data.get("sections")
+    if not isinstance(sections, list) or not sections:
+        problems.append("sections 必须是非空数组")
+    else:
+        for i, section in enumerate(sections):
+            where = f"sections[{i}]"
+            if not isinstance(section, dict):
+                problems.append(f"{where} 必须是对象")
+                continue
+            check_keys(section, SECTION_KEYS, where)
+            check_str(section.get("title"), f"{where}.title", required=True)
+            entries = section.get("entries")
+            if not isinstance(entries, list) or not entries:
+                problems.append(f"{where}.entries 必须是非空数组")
+                continue
+            for j, entry in enumerate(entries):
+                ewhere = f"{where}.entries[{j}]"
+                if not isinstance(entry, dict):
+                    problems.append(f"{ewhere} 必须是对象")
+                    continue
+                check_keys(entry, ENTRY_KEYS, ewhere)
+                for key in ("title", "meta", "sub"):
+                    check_str(entry.get(key), f"{ewhere}.{key}")
+                if "bullets" in entry:
+                    check_str_list(entry["bullets"], f"{ewhere}.bullets")
+                if not any(entry.get(key) for key in ENTRY_KEYS):
+                    problems.append(f"{ewhere} 是空条目")
+
+    if problems:
+        raise InjectionError("CV 数据结构不符合模板要求：\n- " + "\n- ".join(problems))
+
+
 def serialize_payload(data: Any) -> str:
     """Serialize a CV object for safe placement in an HTML script data block."""
     if not isinstance(data, dict):
@@ -108,6 +190,7 @@ def inject_files(
     except (OSError, json.JSONDecodeError) as exc:
         raise InjectionError(f"无法读取或解析 JSON 数据 {data_path}: {exc}") from exc
 
+    validate_cv_data(data)
     result = inject_template(template_text, data)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 

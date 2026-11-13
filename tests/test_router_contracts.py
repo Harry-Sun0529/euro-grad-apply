@@ -7,6 +7,17 @@ REPO = Path(__file__).resolve().parents[1]
 SKILLS = REPO / "skills"
 
 
+ALL_SKILLS = (
+    "euro-grad-apply",
+    "euro-school",
+    "euro-docs",
+    "euro-cv",
+    "euro-phd",
+    "euro-apply",
+    "euro-visa",
+)
+
+
 def read_skill(name: str) -> str:
     return (SKILLS / name / "SKILL.md").read_text(encoding="utf-8")
 
@@ -125,6 +136,27 @@ class RouterContractTests(unittest.TestCase):
         for phrase, command in expected_pairs:
             self.assertIn(phrase, main, f"缺少路由示例: {phrase}")
             self.assertIn(command, main, f"路由示例未指向 {command}")
+
+    def test_every_skill_shares_the_profile_protocol(self):
+        template = SKILLS / "euro-grad-apply" / "assets" / "profile-template.md"
+        self.assertTrue(template.is_file())
+        fields = template.read_text(encoding="utf-8")
+        for field in ("目标专业", "学位证书名称", "毕业目标", "预算", "目标入学时间", "英语成绩"):
+            self.assertIn(field, fields)
+        for name in ALL_SKILLS:
+            text = read_skill(name)
+            self.assertIn("euro-profile.md", text, name)
+            self.assertIn("profile-template.md", text, name)
+            # 写档案前必须征得同意，且不能在无文件环境里承诺档案
+            self.assertRegex(text, r"用户同意才", name)
+            self.assertRegex(text, r"没有文件读写能力.*跳过本节", name)
+            self.assertIn(".gitignore", text, name)
+
+    def test_scene_skills_read_references_on_demand(self):
+        for name in ALL_SKILLS:
+            if name == "euro-grad-apply":
+                continue
+            self.assertIn("按需读", read_skill(name), name)
 
 
 if __name__ == "__main__":
