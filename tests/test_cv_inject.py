@@ -114,6 +114,16 @@ class CvInjectTests(unittest.TestCase):
     def test_validate_accepts_documented_schema(self):
         cv_inject.validate_cv_data(self._valid_data())
 
+    def test_skills_section_needs_section_title_but_entry_title_is_optional(self):
+        data = self._valid_data()
+        data["sections"].append(
+            {"title": "Skills", "entries": [{"bullets": ["Python"]}, {"title": "", "bullets": ["SQL"]}]}
+        )
+        cv_inject.validate_cv_data(data)
+        data["sections"][-1]["title"] = ""
+        with self.assertRaises(cv_inject.InjectionError):
+            cv_inject.validate_cv_data(data)
+
     def test_validate_rejects_misspelled_keys_and_wrong_types(self):
         cases = {
             "entries 写成 items": lambda d: d["sections"][0].update(
